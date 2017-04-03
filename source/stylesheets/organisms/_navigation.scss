@@ -1,0 +1,12 @@
+.nav {
+  &--stacked {
+    a {
+      display: block;
+    }
+  }
+
+  &--sticky {
+    // @include position(absolute, 0px null 0px null);
+    // overflow: scroll;
+  }
+}

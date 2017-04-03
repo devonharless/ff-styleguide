@@ -1,0 +1,62 @@
+doctype html
+html
+  head
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+    meta charset="utf-8"
+    meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"
+
+    title = current_page.data.title || "Friday Feedback Styleguide"
+
+    link href='//fonts.googleapis.com/css?family=Catamaran:200,400,500,700' rel='stylesheet' type='text/css'
+
+    link href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" rel="stylesheet" type="text/css"
+
+    script src="https://use.typekit.net/yvd5vdt.js"
+    script try{Typekit.load({ async: true });}catch(e){}
+
+    == stylesheet_link_tag :site
+    == javascript_include_tag "jquery"
+
+  body class="#{page_classes}"
+    section.hero.row.center-xs.middle-xs
+      .box
+        = image_tag "logo/logo-large.png", width: "200"
+
+    .container
+      .vertical-spacer
+
+      .row
+        .col-xs-12.col-sm-3.col-md-2
+          nav.nav--sticky.nav--stacked
+
+            p.label-text Styleguide
+            = link_to "Atoms", "#atoms", class: "emphasized-text"
+            = link_to "Color", "#color", class: "small-text"
+            = link_to "Typography", "#typography", class: "small-text"
+            = link_to "Buttons", "#buttons", class: "small-text"
+            = link_to "Lists", "#lists", class: "small-text"
+            = link_to "Form Elements", "#forms", class: "small-text"
+            = link_to "Media", "#media", class: "small-text"
+            = link_to "Tables", "#tables", class: "small-text"
+            = link_to "Icons", "#icons", class: "small-text"
+
+            .vertical-spacer--small
+
+            = link_to "Molecules", "#molecules", class: "emphasized-text"
+            = link_to "Alerts/Messages", "#alerts", class: "small-text"
+            = link_to "Dropdown", "#dropdown", class: "small-text"
+
+            .vertical-spacer--small
+
+            = link_to "Organisms", "#organisms", class: "emphasized-text"
+            = link_to "Navigation", "#navigation", class: "small-text"
+            = link_to "Cards", "#cards", class: "small-text"
+
+            .vertical-spacer--small
+
+            = link_to "Templates", "#templates", class: "emphasized-text"
+
+        .col-xs-12.col-sm-9.col-md-8
+          == yield
+
+  javascript:

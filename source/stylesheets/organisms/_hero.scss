@@ -1,0 +1,9 @@
+.hero {
+  background: $hero-background;
+  color: $white;
+  min-height: 200px;
+
+  @include media($mobile) {
+    min-height: none;
+  }
+}
