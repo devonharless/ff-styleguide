@@ -17,6 +17,7 @@ $heading-line-height: 1.2;
 $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
+$large-spacing: $base-spacing * 2;
 $base-z-index: 0;
 
 // Colors
@@ -26,6 +27,7 @@ $sky-blue: #3498db;
 $orange: #f39c12;
 $red: #e74c3c;
 $violet: #9b59b6;
+$midnight: #183047;
 $dark-gray: #34495e;
 $medium-gray: #bdc3c7;
 $light-gray: #ecf0f1;
@@ -36,8 +38,11 @@ $base-font-color: $dark-gray;
 $action-color: $turquoise;
 
 // Element colors
-$hero-background: saturate(darken($dark-gray, 10), 20);
+$hero-background: $midnight;
 $body-background: lighten($light-gray, 3);
+$error-color: $red;
+$success-color: $emerald;
+$warning-color: $orange;
 
 // Border
 $base-border-color: darken($light-gray, 3);

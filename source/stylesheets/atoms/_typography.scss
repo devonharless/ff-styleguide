@@ -33,12 +33,30 @@ a {
   }
 }
 
+code {
+  background: $light-gray;
+  border: $base-border;
+  border-radius: $base-border-radius;
+  display: block;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0 0 $small-spacing / 3;
+  padding: $small-spacing / 3;
+  text-transform: none;
+}
+
+.code--inline {
+  display: inline;
+  margin: 0 0 0 $small-spacing;
+}
+
 hr {
   border-bottom: $base-border;
   border-left: 0;
   border-right: 0;
   border-top: 0;
-  margin: $base-spacing 0;
+  margin: $large-spacing 0;
 }
 
 .primary-headline {
@@ -50,11 +68,13 @@ hr {
 .secondary-headline {
   font-size: 1.25rem;
   font-weight: normal;
+  margin-bottom: $small-spacing;
 }
 
 .tertiary-headline {
   font-size: 1rem;
   font-weight: normal;
+  margin-bottom: $small-spacing;
 }
 
 .label-text {
@@ -68,5 +88,9 @@ hr {
 }
 
 .emphasized-text {
+  font-style: italic;
+}
+
+.callout-text {
   font-weight: bold;
 }

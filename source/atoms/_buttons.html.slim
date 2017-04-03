@@ -1,0 +1,43 @@
+h3#buttons.secondary-headline Buttons
+
+.row
+  .col-xs-4
+    = link_to "Default", "#", class: "button"
+
+  .col-xs-4
+    = link_to "Highlight", "#", class: "button button--highlight"
+
+  .col-xs-4
+    = link_to "Disabled", "#", class: "button button--disabled"
+
+.vertical-spacer--small
+
+.row
+  .col-xs-4
+    = link_to "Success", "#", class: "button button--success"
+
+  .col-xs-4
+    = link_to "Warning", "#", class: "button button--warning"
+
+  .col-xs-4
+    = link_to "Error", "#", class: "button button--error"
+
+.vertical-spacer--small
+
+.row
+  .col-xs-4
+    = link_to "Outline", "#", class: "button button--outline"
+
+  .col-xs-4
+    = link_to "Highlight", "#", class: "button button--outline button--highlight"
+
+  .col-xs-4
+    = link_to "Disabled", "#", class: "button button--outline button--disabled"
+
+.vertical-spacer--small
+
+.row
+  .col-xs-12.col-sm-4
+    = link_to "#", class: "button" do
+      i.icon.icon-check
+      | Icon

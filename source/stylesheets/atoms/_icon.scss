@@ -1,0 +1,19 @@
+.icon {
+  @include size(15px);
+  display: inline-block;
+  text-indent: -9999px;
+  vertical-align: middle;
+
+  &-close {
+    @include size(12px);
+    mask: image-url("icon/icon-close.svg") no-repeat 100% 100%;
+    mask-size: cover;
+    background-color: $white;
+  }
+
+  &-check {
+    mask: image-url("icon/icon-check.svg") no-repeat 0px;
+    mask-size: cover;
+    background-color: $white;
+  }
+}
