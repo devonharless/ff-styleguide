@@ -1,4 +1,5 @@
-#{$all-buttons} {
+#{$all-buttons},
+.button {
   appearance: none;
   background-color: $action-color;
   border: 0;
@@ -31,6 +32,84 @@
 
     &:hover {
       background-color: $action-color;
+    }
+  }
+}
+
+.button .icon {
+  margin-right: $small-spacing;
+}
+
+.button--success {
+  background: $success-color;
+
+  &:hover,
+  &:focus {
+    background: shade($success-color, 20%);
+  }
+}
+
+.button--warning {
+  background: $warning-color;
+
+  &:hover,
+  &:focus {
+    background: shade($warning-color, 20%);
+  }
+}
+
+.button--error {
+  background: $error-color;
+
+  &:hover,
+  &:focus {
+    background: shade($error-color, 20%);
+  }
+}
+
+.button--disabled,
+.button--disabled:hover,
+.button--disabled:focus {
+  background: $medium-gray;
+  color: $light-gray;
+  cursor: default;
+}
+
+.button--outline {
+  background: transparent;
+  border: 1px solid $action-color;
+  box-shadow: 0 0 1px $action-color;
+  color: $action-color;
+
+  &:hover {
+    color: shade($action-color, 20%);
+    border-color: shade($action-color, 20%);
+    background: transparent;
+  }
+
+  &.button--disabled {
+    color: $medium-gray;
+    border-color: $medium-gray;
+    box-shadow: none;
+  }
+}
+
+.button--highlight {
+  background-color: $sky-blue;
+
+  &:hover {
+    background-color: shade($sky-blue, 20%);
+  }
+
+  &.button--outline {
+    background: transparent;
+    border-color: $sky-blue;
+    box-shadow: 0 0 1px $sky-blue;
+    color: $sky-blue;
+
+    &:hover {
+      color: shade($sky-blue, 20%);
+      border-color: shade($sky-blue, 20%);
     }
   }
 }

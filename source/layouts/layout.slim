@@ -28,9 +28,8 @@ html
       .row
         .col-xs-12.col-sm-3.col-md-2
           nav.nav--sticky.nav--stacked
-
             p.label-text Styleguide
-            = link_to "Atoms", "#atoms", class: "emphasized-text"
+            = link_to "Atoms", "#atoms", class: "callout-text"
             = link_to "Color", "#color", class: "small-text"
             = link_to "Typography", "#typography", class: "small-text"
             = link_to "Buttons", "#buttons", class: "small-text"
@@ -42,19 +41,21 @@ html
 
             .vertical-spacer--small
 
-            = link_to "Molecules", "#molecules", class: "emphasized-text"
+            = link_to "Molecules", "#molecules", class: "callout-text"
             = link_to "Alerts/Messages", "#alerts", class: "small-text"
             = link_to "Dropdown", "#dropdown", class: "small-text"
+            = link_to "Button Groups", "#button-groups", class: "small-text"
 
             .vertical-spacer--small
 
-            = link_to "Organisms", "#organisms", class: "emphasized-text"
+            = link_to "Organisms", "#organisms", class: "callout-text"
             = link_to "Navigation", "#navigation", class: "small-text"
             = link_to "Cards", "#cards", class: "small-text"
+            = link_to "Modal", "#modal", class: "small-text"
 
             .vertical-spacer--small
 
-            = link_to "Templates", "#templates", class: "emphasized-text"
+            = link_to "Templates", "#templates", class: "callout-text"
 
         .col-xs-12.col-sm-9.col-md-8
           == yield
