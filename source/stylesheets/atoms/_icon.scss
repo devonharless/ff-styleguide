@@ -1,8 +1,17 @@
 .icon {
-  @include size(15px);
+  @include size($base-font-size);
   display: inline-block;
+  line-height: 1;
   text-indent: -9999px;
   vertical-align: middle;
+
+  &-check {
+    mask: image-url("icon/icon-check.svg") no-repeat center;
+    mask-size: cover;
+    background-color: $white;
+    width: 21px;
+    height: 15px;
+  }
 
   &-close {
     @include size(12px);
@@ -11,9 +20,61 @@
     background-color: $white;
   }
 
-  &-check {
-    mask: image-url("icon/icon-check.svg") no-repeat 0px;
+  &-down-arrow {
+    mask: image-url("icon/icon-down-arrow.svg") no-repeat 0px;
     mask-size: cover;
     background-color: $white;
+  }
+
+  &-link {
+    mask: image-url("icon/icon-link.svg") no-repeat 0px;
+    mask-size: cover;
+    background-color: $white;
+    width: 20px;
+  }
+
+  &-right-arrow {
+    mask: image-url("icon/icon-right-arrow.svg") no-repeat 0px;
+    mask-size: cover;
+    background-color: $white;
+    width: 24px;
+  }
+
+  &-search {
+    mask: image-url("icon/icon-search.svg") no-repeat 0px;
+    mask-size: cover;
+    background-color: $white;
+  }
+
+  &-star {
+    mask: image-url("icon/icon-star.svg") no-repeat 0px;
+    mask-size: cover;
+    background-color: $white;
+  }
+
+  //Size
+  &--small {
+    @include size(0.8125rem);
+  }
+
+  // Mask color manipulation
+  &--action {
+    background-color: $action-color;
+  }
+
+  &--default {
+    background-color: $midnight;
+  }
+
+  &--error {
+    background-color: $error-color;
+  }
+
+  &--success {
+    background-color: $success-color;
+  }
+
+  &--warning {
+    background-color: $warning-color;
   }
 }

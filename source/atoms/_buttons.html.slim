@@ -41,3 +41,60 @@ h3#buttons.secondary-headline Buttons
     = link_to "#", class: "button" do
       i.icon.icon-check
       | Icon
+
+.vertical-spacer--small
+
+.row
+  .col-xs-6.col-sm-4
+    = link_to "Button Link", "#", class: "button button-link"
+
+  .col-xs-6.col-sm-4
+    = link_to "#", class: "button button-link" do
+      i.icon.icon-close.icon--error Icon
+      | Remove
+
+  .col-xs-6.col-sm-4
+    = link_to "#", class: "button button-link" do
+      | See more
+      i.icon.icon-down-arrow.icon--action Icon
+
+.vertical-spacer--small
+
+.row
+  .col-xs-6.col-sm-4
+    = link_to "#", class: "button button-link" do
+      i.icon.icon-check.icon--success Icon
+      | Confirm
+
+  .col-xs-6.col-sm-4
+    = link_to "#", class: "button button-link" do
+      | Next
+      i.icon.icon-right-arrow.icon--default Icon
+
+.vertical-spacer--small
+
+.row
+  .col-xs-6.col-sm-4
+    = link_to "Large", "#", class: "button button--large"
+
+  .col-xs-6.col-sm-4
+    = link_to "Large Outline", "#", class: "button button--outline button--large button--highlight"
+
+  .col-xs-6.col-sm-4
+    = link_to "#", class: "button button--large" do
+      i.icon.icon-check
+      | Large Icon
+
+.vertical-spacer--small
+
+.row
+  .col-xs-4
+    = link_to "Small", "#", class: "button button--small"
+
+  .col-xs-4
+    = link_to "Small Outline", "#", class: "button button--outline button--small"
+
+  .col-xs-4
+    = link_to "#", class: "button button--small" do
+      i.icon.icon-check.icon--small
+      | Small Icon

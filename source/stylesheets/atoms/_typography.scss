@@ -92,5 +92,13 @@ hr {
 }
 
 .callout-text {
+  font-size: 1rem;
   font-weight: bold;
+}
+
+.callout-block-text {
+  color: lighten(desaturate($dark-gray, 20), 20);
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin-bottom: $base-spacing;
 }

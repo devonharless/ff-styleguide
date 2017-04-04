@@ -13,7 +13,8 @@ legend {
 
 label {
   display: block;
-  font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 400;
   margin-bottom: $small-spacing / 2;
 }
 
@@ -25,15 +26,15 @@ textarea {
   font-size: $base-font-size;
 }
 
-#{$all-text-inputs} {
+#{$all-text-inputs},
+select {
   appearance: none;
   background-color: $base-background-color;
   border: $base-border;
   border-radius: $base-border-radius;
-  box-shadow: $form-box-shadow;
   box-sizing: border-box;
   margin-bottom: $small-spacing;
-  padding: $base-spacing / 3;
+  padding: $base-spacing / 3 $base-spacing / 2;
   transition: border-color $base-duration $base-timing;
   width: 100%;
 
@@ -43,12 +44,12 @@ textarea {
 
   &:focus {
     border-color: $action-color;
-    box-shadow: $form-box-shadow-focus;
     outline: none;
   }
 
-  &:disabled {
-    background-color: shade($base-background-color, 5%);
+  &:disabled,
+  &.disabled {
+    background-color: $light-gray;
     cursor: not-allowed;
 
     &:hover {
@@ -77,6 +78,53 @@ textarea {
 }
 
 select {
+  background: $white url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAALCAYAAACzkJeoAAAABGdBTUEAALGPC/xhBQAAANJJREFUGBm1Tj1OAmEUnPl2O23lBraGU4gk9gTZ0MmuYmIpHoGEhoTAAu2HPyfYxdYLGO+gDS12++34fYYrOMV78+bN5D3igNXmrenklhGjdNA7/wiyCWVht5eV3Lug09DDHHTObTkk6qnA5+MTk+13dU6oK5j72JORZCY3SeuRpDz6Pvnl6Sik/wFc2OKbgE17Fw+Hm1xuyrGAhLktM6GeQXw5apj0Z+dW/okOYe58CJjbbZtyryIqCrEYdW6TVvG3DIb1U3FW1chjg+z6qv0ZtF9O4FrvsJTYKQAAAABJRU5ErkJggg==) right 8px center no-repeat;
   margin-bottom: $small-spacing;
   width: 100%;
+}
+
+select[multiple] {
+  background-image: none;
+}
+
+.input--inline {
+  display: inline-block;
+  width: inherit;
+}
+
+.input--large {
+  font-size: 1rem;
+  padding: $small-spacing;
+}
+
+.input--small {
+  font-size: 0.75rem;
+  padding: $small-spacing / 2;
+}
+
+.input--success,
+.input--success:focus {
+  border-color: $success-color;
+}
+
+.input--warning,
+.input--warning:focus {
+  border-color: $warning-color;
+}
+
+.input--error,
+.input--error:focus {
+  border-color: $error-color;
+}
+
+.form-group {
+  margin-bottom: $base-spacing;
+
+  &.has-warning {
+    color: $warning-color;
+  }
+
+  &.has-error {
+    color: $error-color;
+  }
 }

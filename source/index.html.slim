@@ -4,6 +4,8 @@ title: Friday Feedback Styleguide
 
 section#atoms
   h2.primary-headline Atoms
+  p.callout-block-text Atoms are the absolute fundamentals of our system. Atoms include color palettes, fonts, individual elements (i.e. headers, paragraphs, buttons, etc.)
+
   = partial "atoms/color"
 
   hr
@@ -13,21 +15,26 @@ section#atoms
   = partial "atoms/buttons"
 
   hr
+  = partial "atoms/lists"
 
-  h3#lists.secondary-headline Lists
+  hr
+  = partial "atoms/form-elements"
 
-  h3#forms.secondary-headline Forms
+  hr
+  = partial "atoms/table"
 
-  h3#media.secondary-headline Media
+  hr
+  = partial "atoms/icons"
 
-  h3#tables.secondary-headline Tables
+  hr
 
-  h3#icons.secondary-headline Icons
+  h3#badges.secondary-headline Badges
 
 hr
 
 section#molecules
   h2.primary-headline Molecules
+  p.callout-block-text Molecules are the pieces we build with atoms. Although they require atoms, molecules are more along the lines of the lego blocks we will be building with, over time. Although some will get complex, simplicity is key here.
 
   h3#alerts.secondary-headline Alerts &amp; Messages
 
@@ -35,10 +42,30 @@ section#molecules
 
   h3#button-groups.secondary-headline Button Groups
 
+  h3#toggle.secondary-headline Toggle Switch
+
+  h3#forms.secondary-headline Forms
+
+  h4.callout-text Form Group (with errors)
+  .form-group.has-error
+    label Error label
+    input.input--error type="text"
+
+    label Error label
+    select.input--error
+      option Option 1
+      option Option 2
+      option Option 3
+      option Option 4
+      option Option 5
+
+  h4.callout-text Inline form
+
 hr
 
 section#organisms
   h2.primary-headline Organisms
+  p.callout-block-text By combining molecules we can build more complex, but repeatable, pieces of our product.
 
   h3#navigation.secondary-headline Navigation
 
