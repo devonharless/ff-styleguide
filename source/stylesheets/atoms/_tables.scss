@@ -17,8 +17,51 @@ td {
   padding: $small-spacing 0;
 }
 
+tbody tr:hover {
+  background: $light-gray;
+}
+
 tr,
 td,
 th {
   vertical-align: middle;
+}
+
+.table {
+  &--striped {
+    th,
+    td {
+      padding-left: $small-spacing;
+    }
+
+    tr:nth-child(even) {
+      background: $light-gray;
+    }
+
+    tr:nth-child(even):hover {
+      background: darken($light-gray, 3);
+    }
+  }
+
+  &--condensed {
+    th, td {
+      padding: $small-spacing / 2;
+    }
+  }
+
+  &--bordered {
+    border: $base-border;
+    border-bottom: none;
+    border-collapse: separate;
+
+    th,
+    td {
+      border-right: $base-border;
+      padding-left: $small-spacing;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
 }

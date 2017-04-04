@@ -19,15 +19,14 @@ html
 
   body class="#{page_classes}"
     section.hero.row.center-xs.middle-xs
-      .box
-        = image_tag "logo/logo-large.png", width: "200"
+      = image_tag "logo/logo-large.png", width: "200"
 
     .container
       .vertical-spacer
 
       .row
-        .col-xs-12.col-sm-3.col-md-2
-          nav.nav--sticky.nav--stacked
+        .col-xs-12.col-sm-offset-1.col-sm-2
+          nav.nav--stacked
             p.label-text Styleguide
             = link_to "Atoms", "#atoms", class: "callout-text"
             = link_to "Color", "#color", class: "small-text"
@@ -35,9 +34,9 @@ html
             = link_to "Buttons", "#buttons", class: "small-text"
             = link_to "Lists", "#lists", class: "small-text"
             = link_to "Form Elements", "#forms", class: "small-text"
-            = link_to "Media", "#media", class: "small-text"
             = link_to "Tables", "#tables", class: "small-text"
             = link_to "Icons", "#icons", class: "small-text"
+            = link_to "Badges", "#badges", class: "small-text"
 
             .vertical-spacer--small
 
@@ -45,6 +44,8 @@ html
             = link_to "Alerts/Messages", "#alerts", class: "small-text"
             = link_to "Dropdown", "#dropdown", class: "small-text"
             = link_to "Button Groups", "#button-groups", class: "small-text"
+            = link_to "Toggle Switch", "#toggle", class: "small-text"
+            = link_to "Forms", "#forms", class: "small-text"
 
             .vertical-spacer--small
 
@@ -57,7 +58,21 @@ html
 
             = link_to "Templates", "#templates", class: "callout-text"
 
-        .col-xs-12.col-sm-9.col-md-8
+        .col-xs-12.col-sm-8
           == yield
 
   javascript:
+    var $window = $(window);
+
+    function setStickyNavigation() {
+      var window_top_position = $window.scrollTop();
+
+      if(window_top_position >= 200) {
+        $(".nav--stacked").addClass("nav--sticky");
+      }
+      else {
+        $(".nav--stacked").removeClass("nav--sticky");
+      }
+    }
+
+    $window.on('scroll resize', setStickyNavigation);

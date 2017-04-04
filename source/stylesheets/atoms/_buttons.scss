@@ -36,6 +36,36 @@
   }
 }
 
+.button-link,
+.button-link:focus {
+  background: none;
+  color: $action-color;
+  padding: 0;
+
+  &:hover {
+    background: none;
+    color: shade($action-color, 20%);
+
+    .icon {
+      background: shade($action-color, 20%);
+    }
+  }
+
+  .icon {
+    vertical-align: top;
+  }
+}
+
+.button--large {
+  font-size: 1rem;
+  padding: $small-spacing * 1.2 $base-spacing * 1.2;
+}
+
+.button--small {
+  font-size: 0.75rem;
+  padding: $small-spacing / 1.2 $small-spacing;
+}
+
 .button .icon {
   margin-right: $small-spacing;
 }
