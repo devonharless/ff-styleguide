@@ -33,7 +33,7 @@ html
             = link_to "Typography", "#typography", class: "small-text"
             = link_to "Buttons", "#buttons", class: "small-text"
             = link_to "Lists", "#lists", class: "small-text"
-            = link_to "Form Elements", "#forms", class: "small-text"
+            = link_to "Form Elements", "#form-elements", class: "small-text"
             = link_to "Tables", "#tables", class: "small-text"
             = link_to "Icons", "#icons", class: "small-text"
             = link_to "Badges", "#badges", class: "small-text"
@@ -46,12 +46,13 @@ html
             = link_to "Button Groups", "#button-groups", class: "small-text"
             = link_to "Toggle Switch", "#toggle", class: "small-text"
             = link_to "Forms", "#forms", class: "small-text"
+            = link_to "Wells", "#wells", class: "small-text"
+            = link_to "Cards", "#cards", class: "small-text"
 
             .vertical-spacer--small
 
             = link_to "Organisms", "#organisms", class: "callout-text"
             = link_to "Navigation", "#navigation", class: "small-text"
-            = link_to "Cards", "#cards", class: "small-text"
             = link_to "Modal", "#modal", class: "small-text"
 
             .vertical-spacer--small
@@ -63,6 +64,21 @@ html
 
   javascript:
     var $window = $(window);
+
+    $(document).ready(function() {
+      $(".dropdown-trigger").on("click", toggleDropdown);
+    });
+
+    function toggleDropdown(e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      $(this).next(".dropdown-menu").toggleClass("active");
+    }
+
+    function hideDropdown(e) {
+      $(".dropdown-menu").removeClass("active");
+    }
 
     function setStickyNavigation() {
       var window_top_position = $window.scrollTop();
@@ -76,3 +92,4 @@ html
     }
 
     $window.on('scroll resize', setStickyNavigation);
+    $window.on("click", hideDropdown);

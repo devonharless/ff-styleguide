@@ -10,6 +10,12 @@
 @import "atoms/base";
 
 //Molecules
+@import "molecules/alerts";
+@import "molecules/dropdown";
+@import "molecules/button-groups";
+@import "molecules/toggle-switch";
+@import "molecules/well";
+@import "molecules/card";
 
 //Organisms
 @import "organisms/navigation";

@@ -1,0 +1,82 @@
+$badge-font-size: 0.625rem;
+
+.badge {
+  align-items: center;
+  background: lighten($action-color, 10);
+  border-radius: $base-border-radius * 1.5;
+  box-shadow: 0 1px 0 $action-color;
+  color: $white;
+  display: inline-flex;
+  font-size: $badge-font-size;
+  height: 18px;
+  letter-spacing: 0.07rem;
+  line-height: 1;
+  justify-content: center;
+  margin: 0 $small-spacing;
+  padding: 2px 6px 0;
+  text-align: center;
+  text-shadow: 0 1px 0 $action-color;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+
+  &--outline {
+    background: transparent;
+    border: 1px solid $action-color;
+    box-shadow: none;
+    color: $action-color;
+    font-family: $medium-font-family;
+    font-weight: 500;
+    padding-top: 0;
+    text-shadow: none;
+  }
+
+  > .icon {
+    @include size(10px);
+    margin: 0 3px;
+    mask-position: 0px 0px;
+  }
+
+  &--success {
+    background: $success-color;
+    text-shadow: 0 1px 0 darken($success-color, 10);
+    box-shadow: 0 1px 0 darken($success-color, 10);
+  }
+
+  &--warning {
+    background: $warning-color;
+    text-shadow: 0 1px 0 darken($warning-color, 10);
+    box-shadow: 0 1px 0 darken($warning-color, 10);
+  }
+
+  &--error {
+    background: $error-color;
+    text-shadow: 0 1px 0 darken($error-color, 10);
+    box-shadow: 0 1px 0 darken($error-color, 10);
+  }
+}
+
+// Overrides
+.badge--success.badge--outline {
+  background: transparent;
+  border-color: $success-color;
+  box-shadow: none;
+  color: $success-color;
+  text-shadow: none;
+}
+
+.badge--warning.badge--outline {
+  background: transparent;
+  border-color: $warning-color;
+  box-shadow: none;
+  color: $warning-color;
+  text-shadow: none;
+}
+
+.badge--error.badge--outline {
+  background: transparent;
+  border-color: $error-color;
+  box-shadow: none;
+  color: $error-color;
+  text-shadow: none;
+}

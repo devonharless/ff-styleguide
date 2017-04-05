@@ -109,6 +109,7 @@
   background: transparent;
   border: 1px solid $action-color;
   box-shadow: 0 0 1px $action-color;
+  padding: $small-spacing / 1.1 $base-spacing;;
   color: $action-color;
 
   &:hover {

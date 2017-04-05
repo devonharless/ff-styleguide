@@ -1,0 +1,90 @@
+.toggle {
+  position: relative;
+  width: 80px;
+  user-select: none;
+
+  input[type=checkbox] {
+    display: none;
+  }
+
+  &-label {
+    border-radius: 50px;
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+  }
+
+  &-inner {
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.2s ease-in 0s;
+
+    &:before, &:after {
+      color: $white;
+      box-sizing: border-box;
+      float: left;
+      font-family: $medium-font-family;
+      font-size: 0.75rem;
+      font-weight: 500;
+      height: 22px;
+      line-height: 22px;
+      padding: 0;
+      width: 50%;
+    }
+
+    &:before {
+      content: attr(data-active);
+      background-color: $action-color;
+      padding-left: $small-spacing * 1.2;
+    }
+
+    &:after {
+      background-color: desaturate(darken($action-color, 25), 5);
+      content: attr(data-inactive);
+      padding-right: $small-spacing * 1.2;
+      text-align: right;
+    }
+  }
+
+  &-switch {
+    @include size(16px);
+    @include position(absolute, null 58px null null);
+    background: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    margin: 3px;
+    transition: all 0.2s ease-in 0s;
+  }
+}
+
+//Mini switchå
+.toggle--mini {
+  width: 40px;
+
+  .toggle-inner {
+    transition: margin 0.2s ease-in 0s;
+  }
+
+  .toggle-inner:before,
+  .toggle-inner:after {
+    content: "";
+  }
+
+  .toggle-switch {
+    @include size(16px);
+    @include position(absolute, null 18px null null);
+    background: $white;
+    border: none;
+    border-radius: 50%;
+    margin: 3px;
+    transition: all 0.2s ease-in 0s;
+  }
+}
+
+//Checkbox
+.toggle-cb:checked + .toggle-label .toggle-inner {
+  margin-left: 0;
+}
+.toggle-cb:checked + .toggle-label .toggle-switch {
+  right: 0;
+}
