@@ -1,0 +1,37 @@
+.dropdown {
+  position: relative;
+
+  &-menu {
+    @include position(absolute, 36px null null null);
+    transform-origin: 50% 0;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    border: $base-border;
+    box-shadow: 0 7px 25px 0 rgba(0, 0, 0, .12);
+    border-radius: $base-border-radius;
+    line-height: 1.125;
+    opacity: 0;
+    padding: $base-spacing 0;
+    transition: all 0.2s cubic-bezier(1,0,0,1);
+    width: 100%;
+    z-index: -1;
+
+    &.active {
+      z-index: 2;
+      opacity: 1;
+    }
+
+    a {
+      font-family: $medium-font-family;
+      font-weight: 500;
+      line-height: 2.5;
+      padding: 0 $base-spacing;
+
+      &:hover {
+        background: rgba($action-color, 0.2);
+        color: darken($action-color, 5);
+      }
+    }
+  }
+}

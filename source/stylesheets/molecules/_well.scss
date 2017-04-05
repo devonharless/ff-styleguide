@@ -1,0 +1,46 @@
+.well {
+  align-content: center;
+  border: 1px solid rgba($medium-gray, 0.5);
+  border-radius: $base-border-radius;
+  display: flex;
+  flex-direction: column;
+  margin: $base-spacing 0;
+  padding: $base-spacing;
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &--centered {
+    justify-content: center;
+    text-align: center;
+  }
+
+  &--small {
+    padding: $small-spacing;
+  }
+
+  &--large {
+    padding: $large-spacing;
+  }
+
+  &--highlight {
+    background: rgba($highlight-color, 0.05);
+    border-color: $highlight-color;
+  }
+
+  &--success {
+    background: rgba($success-color, 0.05);
+    border-color: $success-color;
+  }
+
+  &--warning {
+    background: rgba($warning-color, 0.05);
+    border-color: $warning-color;
+  }
+
+  &--error {
+    background: rgba($error-color, 0.05);
+    border-color: $error-color;
+  }
+}

@@ -13,8 +13,9 @@ legend {
 
 label {
   display: block;
+  font-family: $medium-font-family;
   font-size: 0.75rem;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: $small-spacing / 2;
 }
 
@@ -30,11 +31,11 @@ textarea {
 select {
   appearance: none;
   background-color: $base-background-color;
-  border: $base-border;
+  border: 1px solid shade($base-border-color, 5);
   border-radius: $base-border-radius;
   box-sizing: border-box;
   margin-bottom: $small-spacing;
-  padding: $base-spacing / 3 $base-spacing / 2;
+  padding: $base-spacing / 2.625 $base-spacing / 2;
   transition: border-color $base-duration $base-timing;
   width: 100%;
 
@@ -78,7 +79,8 @@ textarea {
 }
 
 select {
-  background: $white url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAALCAYAAACzkJeoAAAABGdBTUEAALGPC/xhBQAAANJJREFUGBm1Tj1OAmEUnPl2O23lBraGU4gk9gTZ0MmuYmIpHoGEhoTAAu2HPyfYxdYLGO+gDS12++34fYYrOMV78+bN5D3igNXmrenklhGjdNA7/wiyCWVht5eV3Lug09DDHHTObTkk6qnA5+MTk+13dU6oK5j72JORZCY3SeuRpDz6Pvnl6Sik/wFc2OKbgE17Fw+Hm1xuyrGAhLktM6GeQXw5apj0Z+dW/okOYe58CJjbbZtyryIqCrEYdW6TVvG3DIb1U3FW1chjg+z6qv0ZtF9O4FrvsJTYKQAAAABJRU5ErkJggg==) right 8px center no-repeat;
+  background: $white image-url("icon/icon-up-down-arrows.svg") right 8px center no-repeat;
+  background-size: 8px;
   margin-bottom: $small-spacing;
   width: 100%;
 }
@@ -89,7 +91,29 @@ select[multiple] {
 
 .input--inline {
   display: inline-block;
+  margin-right: $small-spacing;
   width: inherit;
+}
+
+.input-group--inline {
+  display: inline-flex;
+  width: inherit;
+
+  &:first-child {
+    border: 1px solid shade($base-border-color, 5);
+    border-radius: $base-border-radius;
+    overflow: hidden;
+  }
+
+  input {
+    margin: 0;
+    border: none;
+  }
+
+  .button {
+    position: relative;
+    border-radius: 0;
+  }
 }
 
 .input--large {

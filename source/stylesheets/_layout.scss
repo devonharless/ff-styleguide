@@ -5,6 +5,10 @@ body {
 .vertical-spacer {
   margin: $base-spacing 0;
 
+  &--large {
+    margin: $large-spacing 0;
+  }
+
   &--small {
     margin: $small-spacing 0;
   }
