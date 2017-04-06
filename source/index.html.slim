@@ -37,252 +37,22 @@ section#molecules
   = partial "molecules/alerts"
   hr.hr--medium
 
-  h3#dropdown.secondary-headline Dropdowns
-
-  .row
-    .col-xs-4
-      .dropdown
-        = link_to "#", class: "button button-link dropdown-trigger" do
-          ' Link trigger
-          i.icon.icon-down-arrow.icon--action Icon
-
-        .dropdown-menu
-          = link_to "dropdown link", "#"
-          = link_to "dropdown link", "#"
-          = link_to "dropdown link", "#"
-          = link_to "dropdown link", "#"
-          = link_to "dropdown link", "#"
-
-    .col-xs-4
-      .dropdown
-        = link_to "#", class: "button dropdown-trigger" do
-          ' Button trigger
-          i.icon.icon-down-arrow Icon
-
-        .dropdown-menu
-          = link_to "dropdown link", "#"
-          = link_to "dropdown link", "#"
-          = link_to "dropdown link", "#"
-          = link_to "dropdown link", "#"
-          = link_to "dropdown link", "#"
-
+  = partial "molecules/dropdown"
   hr.hr--medium
 
-  h3#button-groups.secondary-headline Button Groups
-
-  .row
-    .col-xs-12.col-sm-6
-      .grouped-options
-        .input-wrapper
-          .option
-            input#option-1 type="radio" name="option"
-            label for="option-1" Option 1
-
-          .option
-            input#option-2 type="radio" name="option"
-            label for="option-2" Option 2
-
-          .option
-            input#option-3 type="radio" name="option"
-            label for="option-3" Option 3
-
-      .vertical-spacer--small
-
-    .col-xs-12.col-sm-6
-      .grouped-options.grouped-options--outline
-        .input-wrapper
-          .option
-            input#option-1 type="radio" name="option"
-            label for="option-1" Option 1
-
-          .option
-            input#option-2 type="radio" name="option"
-            label for="option-2" Option 2
-
-          .option
-            input#option-3 type="radio" name="option"
-            label for="option-3" Option 3
-
-          .option
-            input#option-4 type="radio" name="option"
-            label for="option-4" Option 4
-
+  = partial "molecules/button-groups"
   hr.hr--medium
 
-  h3#toggle.secondary-headline Toggle Switch
-  .vertical-spacer
-
-  .row
-    .col-xs-4
-      .toggle
-        input#toggle-1.toggle-cb type="checkbox" name="toggle" checked="checked"
-        label.toggle-label for="toggle-1"
-          .toggle-inner data-active="active" data-inactive="inactive"
-          .toggle-switch
-
-    .col-xs-4
-      .toggle
-        input#toggle-2.toggle-cb type="checkbox" name="toggle" checked="checked"
-        label.toggle-label for="toggle-2"
-          .toggle-inner data-active="Yes" data-inactive="No"
-          .toggle-switch
-
-      p Edit toggle text using:
-      code
-        ' data-active="Yes"
-      code
-        ' data-inactive="No"
-
-    .col-xs-3
-      .toggle.toggle--mini
-        input#toggle-3.toggle-cb type="checkbox" name="toggle" checked="checked"
-        label.toggle-label for="toggle-3"
-          .toggle-inner
-          .toggle-switch
-      p Mini toggle
-
+  = partial "molecules/toggle-switch"
   hr.hr--medium
 
-  h3#forms.secondary-headline Forms
-  .vertical-spacer
-
-  h4.tertiary-headline Form Group (with errors)
-
-  .form-group.has-error
-    label Error label
-    input.input--error type="text"
-
-    label Error label
-    select.input--error
-      option Option 1
-      option Option 2
-      option Option 3
-      option Option 4
-      option Option 5
-
-  .vertical-spacer--large
-
-  h4.tertiary-headline Inline form (simple)
-  .vertical-spacer
-
-  .form-group
-    input.input--inline type="text" placeholder="Email"
-    input.input--inline type="password" placeholder="Password"
-
-    .input--inline
-      input#checkbox-1 type="checkbox"
-      label.input--inline for="checkbox-1" Remember me
-    input.button type="submit" value="Login"
-
-  h4.tertiary-headline Inline form (with labels)
-  .vertical-spacer
-
-  .form-group
-    .input--inline
-      label for="email-1" Email
-      input#email-1 type="text"
-    .input--inline
-      label for="password-1" Password
-      input#password-1 type="password"
-
-    .input--inline
-      input#checkbox-2 type="checkbox"
-      label.input--inline for="checkbox-2" Remember me
-    input.button type="submit" value="Login"
-
-  h4.tertiary-headline Inline form (v3)
-  .vertical-spacer
-
-  .row
-    .col-xs-6
-      .form-group
-        .input--inline
-          input.input--inline type="text"
-        input.button.input--inline type="submit" value="Update"
-
-    .col-xs-6
-      .form-group
-        .input--inline
-          input.input--inline type="text"
-        input.button.button--outline.input--inline type="submit" value="Update"
-
-  h4.tertiary-headline Combined inline, simple fields
-  .vertical-spacer
-
-  .row
-    .col-xs-6
-      .form-group
-        .input-group--inline
-          input.input--inline type="text"
-          input.button type="submit" value="Submit"
-
-    .col-xs-6
-      .form-group
-        .input-group--inline
-          input.input--inline type="text"
-          button.button type="submit"
-            i.icon.icon-search Search
-            | Search
-
+  = partial "molecules/forms"
   hr.hr--medium
 
-  h3#card.secondary-headline Wells
-  .vertical-spacer
-  .well
-    p Default well. Great for calling out content.
-
-  .well.well--small
-    p This is a lightly padded well.
-
-  .well.well--large
-    p This is a largely padded well.
-
-  .row
-    .col-xs-6
-      .well.well--success.well--centered
-        p Using "success" colors.
-        p
-          ' Also centered content using
-          code.code--inline .well--centered
-
-    .col-xs-6
-      .well.well--highlight.well--centered
-        = image_tag "http://placehold.it/200x80"
-        .vertical-spacer--small
-        h4.tertiary-headline Highlight Well
-        p
-          ' Accomplished using
-          code.code--inline .well--highlight
-
-    .col-xs-6
-      .well.well--warning.well--centered
-        p All sorts of colors
-
-    .col-xs-6
-      .well.well--large.well--error.well--centered
-        p All sorts of colors
-
-  .row
-    .col-xs-12.col-sm-6
-      .well.well--large.well--centered
-        h4.secondary-headline Headline
-        p This is a largely padded well with a simple headline and description text.
-        .vertical-spacer--small
-        button.button Call to action
-
+  = partial "molecules/well"
   hr.hr--medium
 
-  h3#card.secondary-headline Cards
-  .vertical-spacer
-
-  .card
-    p This is a normal padded card.
-
-  .card.card--small
-    p This is a lightly padded card.
-
-  .card.card--large
-    p This is a largely padded card.
+  = partial "molecules/card"
 
 hr.hr--large
 
@@ -291,7 +61,28 @@ section#organisms
   p.callout-block-text By combining molecules we can build more complex, but repeatable, pieces of our product.
 
   h3#navigation.secondary-headline Navigation
+  h4.tertiary-headline Global nav
+  p
+    ' It's easiest to see the global navigation on a separate page,
+    = link_to "full-width.", "/dashboard/navigation.html"
 
-  h3#cards.secondary-headline Cards
+  hr.hr--medium
+  = partial "organisms/modal"
 
-  h3#navigation.secondary-headline Hero
+hr.hr--large
+
+section#templates
+  h2.primary-headline Templates/Layouts
+  p.callout-block-text Resuable layouts for multiple page styles.
+
+  = link_to "Simple card, narrow layout.", "/dashboard/single-column-narrow.html"
+
+  .vertical-spacer
+
+  = link_to "Single column card with nested two column layout.", "/dashboard/single-column-nested.html"
+
+  .vertical-spacer
+
+  = link_to "Single column card with list.", "/dashboard/single-column-list.html"
+
+hr.hr--large

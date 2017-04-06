@@ -1,0 +1,43 @@
+h3#wells.secondary-headline Wells
+.vertical-spacer
+.well
+  p Default well. Great for calling out content.
+
+.well.well--small
+  p This is a lightly padded well.
+
+.well.well--large
+  p This is a largely padded well.
+
+.row
+  .col-xs-6
+    .well.well--success.well--centered
+      p Using "success" colors.
+      p
+        ' Also centered content using
+        code.code--inline .well--centered
+
+  .col-xs-6
+    .well.well--highlight.well--centered
+      = image_tag "http://placehold.it/200x80"
+      .vertical-spacer--small
+      h4.tertiary-headline Highlight Well
+      p
+        ' Accomplished using
+        code.code--inline .well--highlight
+
+  .col-xs-6
+    .well.well--warning.well--centered
+      p All sorts of colors
+
+  .col-xs-6
+    .well.well--large.well--error.well--centered
+      p All sorts of colors
+
+.row
+  .col-xs-12.col-sm-6
+    .well.well--large.well--centered
+      h4.secondary-headline Headline
+      p This is a largely padded well with a simple headline and description text.
+      .vertical-spacer--small
+      button.button Call to action

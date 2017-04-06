@@ -1,0 +1,27 @@
+h3#card.secondary-headline Cards
+.vertical-spacer
+
+.card
+  p This is a normal padded card. Default left alignment.
+
+.card.card--small
+  p This is a lightly padded card. Default left alignment.
+
+.card.card--large
+  p This is a largely padded card. Default left alignment.
+
+.row
+  .col-xs-6
+    .card.card--centered
+      span This is a center aligned card. Vertical & horizontal alignment.
+
+  .col-xs-6
+    .card.card-callout
+      .card-callout-image
+        = image_tag "http://placehold.it/300x200"
+
+      .card-callout-content
+        span
+          ' This is a "callout" card. The card itself has no padding. Only content inside
+          code.code--inline .card-callout-content
+          '  has padding.

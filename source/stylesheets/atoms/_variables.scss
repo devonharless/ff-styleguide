@@ -26,6 +26,7 @@ $base-z-index: 0;
 $turquoise: #3eb5ac;
 $emerald: #2ecc71;
 $sky-blue: #3498db;
+$light-blue: #f2f7fa;
 $orange: #f39c12;
 $red: #e74c3c;
 $violet: #9b59b6;
@@ -41,7 +42,7 @@ $action-color: $turquoise;
 
 // Element colors
 $hero-background: $midnight;
-$body-background: lighten($light-gray, 3);
+$body-background: $light-blue;
 $error-color: $red;
 $success-color: $emerald;
 $warning-color: $orange;

@@ -62,12 +62,44 @@ html
         .col-xs-12.col-sm-8
           == yield
 
+    .overlay
+      #default-modal.modal
+        = link_to '#', class: "close-modal-trigger" do
+          i.icon.icon-close.icon--action.icon--medium Close
+
+        h1.primary-headline Modal headline
+        p Aliquam id varius felis, eu iaculis mauris. Curabitur in efficitur massa. Fusce scelerisque justo vel leo ultrices egestas.
+
+      #small-modal.modal.modal--small
+        = link_to '#', class: "close-modal-trigger" do
+          i.icon.icon-close.icon--action.icon--medium Close
+        h1.secondary-headline Small modal
+        p Aliquam id varius felis, eu iaculis mauris. Curabitur in efficitur massa. Fusce scelerisque justo vel leo ultrices egestas.
+
   javascript:
     var $window = $(window);
 
     $(document).ready(function() {
       $(".dropdown-trigger").on("click", toggleDropdown);
+      $(".modal-trigger").on("click", toggleModal);
+      $(".close-modal-trigger").on("click", dismissModal);
     });
+
+    function toggleModal(e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      var modal = $(this).data("target");
+      $(".overlay").addClass("active");
+      $(modal).addClass("active");
+    }
+
+    function dismissModal(e) {
+      e.preventDefault();
+
+      $(".overlay").removeClass("active");
+      $(".modal").removeClass("active");
+    }
 
     function toggleDropdown(e) {
       e.preventDefault();
@@ -76,7 +108,7 @@ html
       $(this).next(".dropdown-menu").toggleClass("active");
     }
 
-    function hideDropdown(e) {
+    function hidePopupElements(e) {
       $(".dropdown-menu").removeClass("active");
     }
 
@@ -92,4 +124,4 @@ html
     }
 
     $window.on('scroll resize', setStickyNavigation);
-    $window.on("click", hideDropdown);
+    $window.on("click", hidePopupElements);

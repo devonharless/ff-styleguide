@@ -1,0 +1,31 @@
+h3#toggle.secondary-headline Toggle Switch
+.vertical-spacer
+
+.row
+  .col-xs-4
+    .toggle
+      input#toggle-1.toggle-cb type="checkbox" name="toggle" checked="checked"
+      label.toggle-label for="toggle-1"
+        .toggle-inner data-active="active" data-inactive="inactive"
+        .toggle-switch
+
+  .col-xs-4
+    .toggle
+      input#toggle-2.toggle-cb type="checkbox" name="toggle" checked="checked"
+      label.toggle-label for="toggle-2"
+        .toggle-inner data-active="Yes" data-inactive="No"
+        .toggle-switch
+
+    p Edit toggle text using:
+    code
+      ' data-active="Yes"
+    code
+      ' data-inactive="No"
+
+  .col-xs-3
+    .toggle.toggle--mini
+      input#toggle-3.toggle-cb type="checkbox" name="toggle" checked="checked"
+      label.toggle-label for="toggle-3"
+        .toggle-inner
+        .toggle-switch
+    p Mini toggle

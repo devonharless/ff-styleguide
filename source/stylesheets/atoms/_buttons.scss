@@ -2,7 +2,7 @@
 .button {
   appearance: none;
   background-color: $action-color;
-  border: 0;
+  border: 1px solid transparent;
   border-radius: $base-border-radius;
   color: #fff;
   cursor: pointer;
@@ -12,6 +12,7 @@
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
   line-height: 1;
+  height: 38px;
   padding: $small-spacing $base-spacing;
   text-align: center;
   text-decoration: none;
@@ -39,7 +40,10 @@
 .button-link,
 .button-link:focus {
   background: none;
+  border: none;
   color: $action-color;
+  height: inherit;
+  outline: none;
   padding: 0;
 
   &:hover {
@@ -59,15 +63,17 @@
 .button--large {
   font-size: 1rem;
   padding: $small-spacing * 1.2 $base-spacing * 1.2;
+  height: inherit;
 }
 
 .button--small {
   font-size: 0.75rem;
   padding: $small-spacing / 1.2 $small-spacing;
+  height: inherit;
 }
 
-.button .icon {
-  margin-right: $small-spacing;
+.button--wide {
+  width: 100%;
 }
 
 .button--success {

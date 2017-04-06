@@ -18,7 +18,7 @@ td {
 }
 
 tbody tr:hover {
-  background: $light-gray;
+  background: $body-background;
 }
 
 tr,
@@ -32,14 +32,15 @@ th {
     th,
     td {
       padding-left: $small-spacing;
+      padding-right: $small-spacing;
     }
 
     tr:nth-child(even) {
-      background: $light-gray;
+      background: $light-blue;
     }
 
     tr:nth-child(even):hover {
-      background: darken($light-gray, 3);
+      background: darken($light-blue, 3);
     }
   }
 

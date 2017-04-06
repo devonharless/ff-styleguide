@@ -23,11 +23,9 @@
       color: $white;
       box-sizing: border-box;
       float: left;
-      font-family: $medium-font-family;
       font-size: 0.75rem;
-      font-weight: 500;
-      height: 22px;
-      line-height: 22px;
+      height: 25px;
+      line-height: 25px;
       padding: 0;
       width: 50%;
     }
@@ -39,20 +37,28 @@
     }
 
     &:after {
-      background-color: desaturate(darken($action-color, 25), 5);
+      background-color: desaturate(darken($action-color, 10), 35);
       content: attr(data-inactive);
       padding-right: $small-spacing * 1.2;
       text-align: right;
     }
+
+    &:hover:before {
+      background: shade($action-color, 20);
+    }
+
+    &:hover:after {
+      background: desaturate(darken($action-color, 20), 35);
+    }
   }
 
   &-switch {
-    @include size(16px);
-    @include position(absolute, null 58px null null);
+    @include size(17px);
+    @include position(absolute, null 54px null null);
     background: #FFFFFF;
     border: none;
     border-radius: 50%;
-    margin: 3px;
+    margin: 4px 5px;
     transition: all 0.2s ease-in 0s;
   }
 }
@@ -71,12 +77,10 @@
   }
 
   .toggle-switch {
-    @include size(16px);
-    @include position(absolute, null 18px null null);
+    @include position(absolute, null 14px null null);
     background: $white;
     border: none;
     border-radius: 50%;
-    margin: 3px;
     transition: all 0.2s ease-in 0s;
   }
 }

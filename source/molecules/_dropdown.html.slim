@@ -1,0 +1,27 @@
+h3#dropdown.secondary-headline Dropdowns
+
+.dropdown
+  = link_to "#", class: "button button-link dropdown-trigger" do
+    ' Link trigger
+    i.icon.icon-down-arrow.icon--action Icon
+
+  .dropdown-menu
+    = link_to "dropdown link", "#"
+    = link_to "dropdown link", "#"
+    = link_to "dropdown link", "#"
+    = link_to "dropdown link", "#"
+    = link_to "dropdown link", "#"
+
+.vertical-spacer
+
+.dropdown
+  = link_to "#", class: "button dropdown-trigger" do
+    ' Button trigger
+    i.icon.icon-down-arrow Icon
+
+  .dropdown-menu
+    = link_to "dropdown link", "#"
+    = link_to "dropdown link", "#"
+    = link_to "dropdown link", "#"
+    = link_to "dropdown link", "#"
+    = link_to "dropdown link", "#"

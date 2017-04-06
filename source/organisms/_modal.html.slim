@@ -1,0 +1,17 @@
+h3#modal.secondary-headline Modal
+
+.vertical-spacer--small
+
+.row
+  .col-xs-6
+    = link_to "Launch default modal", "#", data: {target: "#default-modal"}, class: "button modal-trigger"
+    p Launch default modal with a link styled as a button.
+
+  .col-xs-6
+    = link_to "Launch default modal", "#", data: {target: "#default-modal"}, class: "modal-trigger"
+    p Launch default modal with a link.
+
+.vertical-spacer--medium
+
+button.button.modal-trigger data-target="#small-modal" Small modal
+p Launch small modal with a button.

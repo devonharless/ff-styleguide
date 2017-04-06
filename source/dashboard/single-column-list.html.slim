@@ -1,0 +1,101 @@
+.nav.nav--global
+  .container
+    .row.between-xs.middle-xs
+      .col-xs-3
+        = link_to "/", class: "logo" do
+          = image_tag "logo/logo-large.png"
+
+      .col-xs-9
+        .row.middle-xs.end-xs
+          .nav-links.col-xs
+            = link_to "Team", "#"
+            = link_to "Campaigns", "#", class: "active"
+            = link_to "Kudos", "#"
+
+          .dropdown.col-xs-3
+            = link_to "#", class: "button button-link dropdown-trigger" do
+              ' Username
+              i.icon.icon-down-arrow.icon--action Icon
+
+            .dropdown-menu
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+
+.container
+  .nav.nav--secondary
+    .row.between-xs.middle-xs
+      .col-xs
+        h1.secondary-headline Campaigns
+      .col-xs.end-xs
+        button.button.button--highlight Create a new campaign
+
+  .card
+    .row
+      .col-xs-12
+        table.table
+          thead
+            tr
+              th width="1%"
+              th width="10%"
+              th width="20%" Campaign Type
+              th width="38%" Actions
+              th width="20%" Status
+              th width="10%"
+              th width="1%"
+          tbody
+            tr
+              td
+              td
+                span.badge.badge--outline Active
+              td
+                span Weekly Check-in
+              td
+                span Emails will be sent on 04/09/2017.
+              td
+                .toggle
+                  input#toggle-1.toggle-cb type="checkbox" name="toggle" checked="checked"
+                  label.toggle-label for="toggle-1"
+                    .toggle-inner data-active="active" data-inactive="inactive"
+                    .toggle-switch
+              td align="right"
+                button.button--outline.button--small.button--highlight Edit
+              td
+
+            tr
+              td
+              td
+                span.badge.badge--outline.badge--inactive Inactive
+              td
+                span Quarterly Review
+              td
+                span Emails will be sent on 04/09/2017.
+              td
+                .toggle
+                  input#toggle-1.toggle-cb type="checkbox" name="toggle"
+                  label.toggle-label for="toggle-1"
+                    .toggle-inner data-active="active" data-inactive="inactive"
+                    .toggle-switch
+              td align="right"
+                button.button--outline.button--small.button--highlight Edit
+              td
+
+            tr
+              td
+              td
+                span.badge.badge--outline.badge--inactive Inactive
+              td
+                span Annual Review
+              td
+                span Emails will be sent on 04/09/2017.
+              td
+                .toggle
+                  input#toggle-1.toggle-cb type="checkbox" name="toggle"
+                  label.toggle-label for="toggle-1"
+                    .toggle-inner data-active="active" data-inactive="inactive"
+                    .toggle-switch
+              td align="right"
+                button.button--outline.button--small.button--highlight Edit
+              td
