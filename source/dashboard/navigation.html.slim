@@ -1,0 +1,25 @@
+.nav.nav--global
+  .container
+    .row.between-xs.middle-xs
+      .col-xs-3
+        = link_to "/", class: "logo" do
+          = image_tag "logo/logo-large.png"
+
+      .col-xs-9
+        .row.middle-xs.end-xs
+          .nav-links.col-xs
+            = link_to "Team", "#", class: "active"
+            = link_to "Campaigns", "#"
+            = link_to "Kudos", "#"
+
+          .dropdown.col-xs-3
+            = link_to "#", class: "button button-link dropdown-trigger" do
+              ' Username
+              i.icon.icon-down-arrow.icon--action Icon
+
+            .dropdown-menu
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"

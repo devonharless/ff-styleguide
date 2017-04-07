@@ -37,6 +37,12 @@ $badge-font-size: 0.625rem;
     mask-position: 0px 0px;
   }
 
+  &--inactive {
+    background: $medium-gray;
+    text-shadow: 0 1px 0 darken($medium-gray, 10);
+    box-shadow: 0 1px 0 darken($medium-gray, 10);
+  }
+
   &--success {
     background: $success-color;
     text-shadow: 0 1px 0 darken($success-color, 10);
@@ -57,6 +63,14 @@ $badge-font-size: 0.625rem;
 }
 
 // Overrides
+.badge--inactive.badge--outline {
+  background: transparent;
+  border-color: $medium-gray;
+  box-shadow: none;
+  color: $medium-gray;
+  text-shadow: none;
+}
+
 .badge--success.badge--outline {
   background: transparent;
   border-color: $success-color;

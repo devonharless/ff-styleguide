@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+    meta charset="utf-8"
+    meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"
+
+    title = current_page.data.title || "Friday Feedback Styleguide"
+
+    link href='//fonts.googleapis.com/css?family=Catamaran:200,400,500,700' rel='stylesheet' type='text/css'
+
+    link href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" rel="stylesheet" type="text/css"
+
+    script src="https://use.typekit.net/yvd5vdt.js"
+    script try{Typekit.load({ async: true });}catch(e){}
+
+    == stylesheet_link_tag :site
+    == javascript_include_tag "jquery"
+
+  body class="#{page_classes}"
+    == yield
+
+  javascript:
+    var $window = $(window);
+
+    $(document).ready(function() {
+      $(".dropdown-trigger").on("click", toggleDropdown);
+    });
+
+    function toggleDropdown(e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      $(this).next(".dropdown-menu").toggleClass("active");
+    }
+
+    function hideDropdown(e) {
+      $(".dropdown-menu").removeClass("active");
+    }
+
+    $window.on("click", hideDropdown);

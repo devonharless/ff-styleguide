@@ -11,8 +11,8 @@
 
   .option {
     align-items: center;
-    background-color: $action-color;
-    border-right: 1px solid $base-border-color;
+    background-color: rgba($action-color, 0.25);
+    border-right: 2px solid $base-border-color;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -32,13 +32,13 @@
     }
 
     &:hover {
-      background: shade($action-color, 20);
+      background: shade($action-color, 10);
+      color: $white;
       opacity: 1;
     }
   }
 
   label {
-    color: $white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,8 +66,8 @@
 
     &:checked + label,
     &:checked + label span {
-      background: shade($action-color, 20);
-      border: 1px solid shade($action-color, 25);
+      background: $action-color;
+      border: 1px solid shade($action-color, 5);
       color: white;
     }
   }
@@ -79,6 +79,7 @@
   }
 
   .option {
+    border-width: 1px;
     border-right-color: $action-color;
     background: none;
 
@@ -98,9 +99,9 @@
   input {
     &:checked + label,
     &:checked + label {
-      background: rgba($action-color, 0.4);
+      background: rgba($action-color, 0.5);
       border: none;
-      color: shade($action-color, 25);
+      color: shade($action-color, 45);
     }
   }
 }

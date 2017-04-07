@@ -64,8 +64,12 @@
     @include size(0.8125rem);
   }
 
+  &--medium {
+    @include size(20px);
+  }
+
   &--large {
-    @include size(100px);
+    @include size(50px);
   }
 
   // Mask color manipulation
