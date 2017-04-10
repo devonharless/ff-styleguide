@@ -1,0 +1,105 @@
+$right-pos: calc(100% - 200px);
+
+.tooltip {
+  cursor: pointer;
+  position: relative;
+
+  &:after {
+    @include position(absolute, 0px null null 50%);
+    background-color: $white;
+    border-radius: $base-border-radius;
+    box-shadow: 0 0 4px 1px $base-border-color;
+    color: shade($medium-gray, 30);
+    content: attr(data-tooltip);
+    display: flex;
+    flex-direction: column;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    min-width: 180px;
+    opacity: 0;
+    padding: $small-spacing;
+    pointer-events: none;
+    text-align: center;
+    transform: translate(-50%, -140%);
+    transition: opacity 0.2s ease-in-out,
+    visibility 0.2s ease-in-out,
+    transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+    visibility: hidden;
+    z-index: 4;
+  }
+
+  &:hover:after,
+  &:focus:after {
+    opacity: 1;
+    transform: translate(-50%, -110%);
+    visibility: visible;
+  }
+
+  //Different Alignments
+
+  &--left {
+    &:after {
+      left: 0px;
+      top: 50%;
+      transform: translate(-100%, -50%);
+    }
+
+    &:hover:after,
+    &:focus:after {
+      transform: translate(-110%, -50%);
+    }
+  }
+
+  &--right {
+    &:after {
+      left: inherit;
+      right: 0px;
+      top: 50%;
+      transform: translate(100%, -50%);
+    }
+
+    &:hover:after,
+    &:focus:after {
+      transform: translate(110%, -50%);
+    }
+  }
+
+  &--bottom {
+    &:after {
+      bottom: 0px;
+      top: inherit;
+      transform: translate(-50%, 100%);
+    }
+
+    &:hover:after,
+    &:focus:after {
+      transform: translate(-50%, 110%);
+    }
+  }
+
+
+  //Responsive
+  @include media($mobile) {
+    &--left:after,
+    &--right:after,
+    &--bottom:after,
+    &:after {
+      bottom: inherit;
+      left: 0px;
+      top: 0px;
+      right: inherit;
+      transform: translate(0, -140%);
+    }
+
+    &--left:hover:after,
+    &--right:hover:after,
+    &--bottom:hover:after,
+    &--left:focus:after,
+    &--right:focus:after,
+    &--bottom:focus:after,
+    &:hover:after,
+    &:focus:after {
+      transform: translate(0, -110%);
+    }
+  }
+}

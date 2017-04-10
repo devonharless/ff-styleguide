@@ -12,9 +12,10 @@ legend {
 }
 
 label {
+  color: $action-color;
   display: block;
   font-family: $medium-font-family;
-  font-size: 0.75rem;
+  font-size: $base-font-size;
   font-weight: 500;
   margin-bottom: $small-spacing / 2;
 }

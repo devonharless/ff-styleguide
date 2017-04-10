@@ -1,0 +1,23 @@
+h3#tooltip.secondary-headline Tooltip
+.vertical-spacer
+
+= link_to "Default tooltip", "#", class: "tooltip", data: {"tooltip": "Tooltip text goes here."}
+
+.vertical-spacer
+
+p
+  ' Example of a
+  = link_to "tooltip containing a lot of content", "#", class: "tooltip", data: {"tooltip": "This could be an example of a lot of tooltip text. Multiple sentences and all that jazz."}
+  ', and it happens to be within a sentence.
+
+.vertical-spacer
+
+= link_to "Left aligned tooltip", "#", class: "tooltip tooltip--left", data: {"tooltip": "Left aligned tooltip text can go here."}
+
+.vertical-spacer
+
+= link_to "This is an example of a right aligned tooltip", "#", class: "tooltip tooltip--right", data: {"tooltip": "Tooltip text goes here."}
+
+.vertical-spacer
+
+= link_to "Bottom aligned tooltip", "#", class: "tooltip tooltip--bottom", data: {"tooltip": "Tooltip text goes here."}

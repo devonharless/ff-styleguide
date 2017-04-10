@@ -1,0 +1,40 @@
+h3#avatar.secondary-headline Avatar
+.vertical-spacer
+
+.row.bottom-xs
+  .col-xs-4
+    .avatar
+      = image_tag "http://loremflickr.com/200/200/dog"
+
+    p Regular image avatar
+
+  .col-xs-4
+    .avatar
+      = image_tag "", alt: "DH"
+
+    p Avatar with text initials
+
+  .col-xs-4
+    .avatar.avatar--small
+      = image_tag "http://loremflickr.com/100/100/dog"
+
+    p Small image avatar
+
+.row.bottom-xs
+  .col-xs-4
+    .avatar.avatar--small
+      = image_tag "", alt: "LT"
+
+    p Small avatar with initials
+
+  .col-xs-4
+    .avatar.avatar--large
+      = image_tag "http://loremflickr.com/200/200/dog"
+
+    p Large image avatar
+
+  .col-xs-4
+    .avatar.avatar--large
+      = image_tag "", alt: "LT"
+
+    p Large avatar with initials

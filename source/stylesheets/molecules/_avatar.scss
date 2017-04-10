@@ -1,0 +1,51 @@
+.avatar {
+  @include size(3.75rem);
+  border: 2px solid $white;
+  box-shadow: 0 0 0 2px $action-color;
+  border-radius: 50%;
+  box-sizing: content-box;
+  display: inline-block;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+
+  img {
+    @include size(3.75rem);
+    position: relative;
+  }
+
+  img:before {
+    @include position(absolute, null 0px null 0px);
+    background: $highlight-color;
+    content: attr(alt);
+    color: $white;
+    line-height: 3.75rem;
+    text-transform: uppercase;
+  }
+
+  &--small {
+    @include size(2.5rem);
+    font-size: 0.75rem;
+
+    img {
+      @include size(2.5rem);
+    }
+
+    img:before {
+      line-height: 2.5rem;
+    }
+  }
+
+  &--large {
+    @include size(5rem);
+    font-size: 1.5rem;
+
+    img {
+      @include size(5rem);
+    }
+
+    img:before {
+      line-height: 5rem;
+    }
+  }
+}
