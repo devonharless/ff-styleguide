@@ -26,13 +26,16 @@
 
       .col-xs-9
         .row.middle-xs.end-xs
-          .nav-links.col-xs-6.col-sm
+          .nav-links.col-xs-6.col-sm-9
             = link_to "Team", "#", class: "active"
             = link_to "Campaigns", "#"
             = link_to "Kudos", "#"
 
-          .dropdown.col-xs-5.col-sm-3
+          .dropdown.col-xs-5.col-sm
             = link_to "#", class: "button button-link dropdown-trigger" do
+              .avatar.avatar--small
+                = image_tag "http://loremflickr.com/200/200/dog"
+
               ' Username
               i.icon.icon-down-arrow.icon--action Icon
 
