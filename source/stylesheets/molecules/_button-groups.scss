@@ -11,7 +11,7 @@
 
   .option {
     align-items: center;
-    background-color: rgba($action-color, 0.25);
+    background-color: rgba(desaturate($action-color, 20), 0.25);
     border-right: 2px solid $base-border-color;
     display: flex;
     flex-direction: column;
@@ -32,9 +32,12 @@
     }
 
     &:hover {
-      background: shade($action-color, 10);
-      color: $white;
+      background: lighten($action-color, 10);
       opacity: 1;
+
+      label {
+        color: $white;
+      }
     }
   }
 
@@ -86,6 +89,11 @@
 
     &:hover {
       background: rgba($action-color, 0.2);
+      color: $white;
+
+      label {
+        color: $action-color;
+      }
     }
   }
 

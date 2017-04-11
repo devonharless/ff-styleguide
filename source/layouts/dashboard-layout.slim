@@ -25,7 +25,14 @@ html
 
     $(document).ready(function() {
       $(".dropdown-trigger").on("click", toggleDropdown);
+      $(".menu-trigger").on("click", toggleMobileNavigation);
     });
+
+    function toggleMobileNavigation(e) {
+      e.preventDefault();
+
+      $(".menu-links").slideToggle();
+    }
 
     function toggleDropdown(e) {
       e.preventDefault();

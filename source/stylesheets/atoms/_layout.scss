@@ -35,6 +35,11 @@ body {
 
 .container {
   padding: 0 $base-spacing;
+  width: 100%;
+
+  @include media($mobile) {
+    padding: 0 $base-spacing / 1.5;
+  }
 }
 
 footer {

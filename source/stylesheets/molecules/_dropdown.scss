@@ -2,6 +2,12 @@
   display: inline-block;
   position: relative;
 
+  &-trigger {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+  }
+
   &-menu {
     @include position(absolute, 36px null null 50%);
     transform-origin: 50% 0;

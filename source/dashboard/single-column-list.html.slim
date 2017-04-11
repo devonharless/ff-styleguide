@@ -1,3 +1,22 @@
+.nav.nav--global.nav--mobile
+  .container
+    .row.middle-xs
+      .col-xs-2
+        = link_to "#", class: "menu-trigger" do
+          i.icon.icon--menu Menu
+
+      .col-xs-10
+        = link_to "/", class: "logo" do
+          = image_tag "logo/logo-large.png"
+
+    .menu-links
+      = link_to "Team", "#", class: "active"
+      = link_to "Campaigns", "#"
+      = link_to "Kudos", "#"
+      = link_to "Account", "#"
+      = link_to "Link", "#"
+      = link_to "Log out", "#"
+
 .nav.nav--global
   .container
     .row.between-xs.middle-xs
@@ -7,13 +26,16 @@
 
       .col-xs-9
         .row.middle-xs.end-xs
-          .nav-links.col-xs
-            = link_to "Team", "#"
-            = link_to "Campaigns", "#", class: "active"
+          .nav-links.col-xs-6.col-sm-9
+            = link_to "Team", "#", class: "active"
+            = link_to "Campaigns", "#"
             = link_to "Kudos", "#"
 
-          .dropdown.col-xs-3
+          .dropdown.col-xs-5.col-sm
             = link_to "#", class: "button button-link dropdown-trigger" do
+              .avatar.avatar--small
+                = image_tag "http://loremflickr.com/200/200/dog"
+
               ' Username
               i.icon.icon-down-arrow.icon--action Icon
 
@@ -38,16 +60,13 @@
         table.table
           thead
             tr
-              th width="1%"
               th width="10%"
               th width="20%" Campaign Type
               th width="38%" Actions
               th width="20%" Status
               th width="10%"
-              th width="1%"
           tbody
             tr
-              td
               td
                 span.badge.badge--outline Active
               td
@@ -61,11 +80,9 @@
                     .toggle-inner data-active="active" data-inactive="inactive"
                     .toggle-switch
               td align="right"
-                button.button--outline.button--small.button--highlight Edit
-              td
+                button.button--outline.button--small.button--highlight.button--wide Edit
 
             tr
-              td
               td
                 span.badge.badge--outline.badge--inactive Inactive
               td
@@ -79,11 +96,9 @@
                     .toggle-inner data-active="active" data-inactive="inactive"
                     .toggle-switch
               td align="right"
-                button.button--outline.button--small.button--highlight Edit
-              td
+                button.button--outline.button--small.button--highlight.button--wide Edit
 
             tr
-              td
               td
                 span.badge.badge--outline.badge--inactive Inactive
               td
@@ -97,5 +112,4 @@
                     .toggle-inner data-active="active" data-inactive="inactive"
                     .toggle-switch
               td align="right"
-                button.button--outline.button--small.button--highlight Edit
-              td
+                button.button--outline.button--small.button--highlight.button--wide Edit
