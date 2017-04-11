@@ -17,6 +17,12 @@ td {
   padding: $small-spacing 0;
 }
 
+tr td:last-child {
+  padding-bottom: $base-spacing;
+  border-bottom: $base-border;
+  margin-bottom: $small-spacing;
+}
+
 tbody tr:hover {
   background: $body-background;
 }
@@ -64,5 +70,21 @@ th {
         border-right: none;
       }
     }
+  }
+}
+
+@include media($mobile) {
+  thead {
+    display: none;
+  }
+
+  table, tbody, th, td, tr {
+    border: none;
+    padding: $small-spacing / 3;
+    display: block;
+  }
+
+  tbody tr:hover {
+    background: transparent;
   }
 }

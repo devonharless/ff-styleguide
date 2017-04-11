@@ -34,6 +34,8 @@
       margin: 0;
     }
 
+    @include media($mobile) {
+    }
   }
 
   &--global {
@@ -43,6 +45,10 @@
     margin: 0;
     padding: 0;
 
+    @include media($mobile) {
+      display: none;
+    }
+
     .logo {
       display: block;
       margin: 0;
@@ -51,7 +57,7 @@
     }
 
     .row:first-of-type {
-      height: 65px;
+      min-height: 65px;
     }
 
     .nav-links a,
@@ -69,6 +75,32 @@
     a.active {
       color: $action-color;
       font-weight: 600;
+    }
+  }
+
+  &--mobile {
+    display: none;
+
+    @include media($mobile) {
+      display: block;
+    }
+
+    .menu-trigger {
+      display: block;
+    }
+
+    .menu-links {
+      display: none;
+    }
+
+    .menu-links a {
+      display: block;
+      border-bottom: $base-border;
+      padding: $small-spacing 0;
+
+      &:last-child {
+        border-bottom: none;
+      }
     }
   }
 }

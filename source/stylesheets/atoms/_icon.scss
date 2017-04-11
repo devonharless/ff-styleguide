@@ -33,6 +33,13 @@
     width: 20px;
   }
 
+  &--menu {
+    @include size(40px);
+    mask: image-url("icon/icon-menu.svg") no-repeat 0px;
+    mask-size: cover;
+    background-color: $action-color;
+  }
+
   &-right-arrow {
     mask: image-url("icon/icon-right-arrow.svg") no-repeat 0px;
     mask-size: cover;

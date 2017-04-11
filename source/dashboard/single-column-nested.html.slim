@@ -1,3 +1,22 @@
+.nav.nav--global.nav--mobile
+  .container
+    .row.middle-xs
+      .col-xs-2
+        = link_to "#", class: "menu-trigger" do
+          i.icon.icon--menu Menu
+
+      .col-xs-10
+        = link_to "/", class: "logo" do
+          = image_tag "logo/logo-large.png"
+
+    .menu-links
+      = link_to "Team", "#", class: "active"
+      = link_to "Campaigns", "#"
+      = link_to "Kudos", "#"
+      = link_to "Account", "#"
+      = link_to "Link", "#"
+      = link_to "Log out", "#"
+
 .nav.nav--global
   .container
     .row.between-xs.middle-xs
@@ -7,12 +26,12 @@
 
       .col-xs-9
         .row.middle-xs.end-xs
-          .nav-links.col-xs
+          .nav-links.col-xs-6.col-sm
             = link_to "Team", "#", class: "active"
             = link_to "Campaigns", "#"
             = link_to "Kudos", "#"
 
-          .dropdown.col-xs-3
+          .dropdown.col-xs-5.col-sm-3
             = link_to "#", class: "button button-link dropdown-trigger" do
               ' Username
               i.icon.icon-down-arrow.icon--action Icon
@@ -26,27 +45,23 @@
 
 .container
   .nav.nav--secondary
-    .row.between-xs.middle-xs
-      .col-xs
+    .row.between-sm.middle-sm
+      .col-xs-12.col-sm
         h1.secondary-headline Page Headline
-      .col-xs
-        .row.end-xs.middle-xs
-          .col-xs
-            = link_to "View-specific link"
+      .col-xs-12.col-sm
+        .row.middle-xs.end-sm
+          .col-xs.col-sm-2
+            = link_to "Sub link"
 
-          .col-xs
-            .form-group
-              .input-group--inline
-                input.input--inline type="text"
-                button.button
-                  i.icon.icon-search Search
-                  '  Search
-          .col-xs
+          .col-xs.col-sm-2
+            = link_to "Sub link"
+
+          .col-xs.col-sm-4
             button.button.button--highlight Call to Action
 
   .card.card--large
     .row
-      .col-xs-12.col-sm-7
+      .col-xs-12.col-sm-7.last-xs.first-sm
         h2.tertiary-headline Please complete the feedback below:
 
         .vertical-spacer
@@ -87,10 +102,12 @@
 
         hr.hr--medium
 
-        .row
-          .col-xs
-            input.button type="submit" value="Complete Feedback"
-          .col-xs
+        .row.center-xs.start-sm
+          .col-xs-12.col-sm
+            .form-group
+              input.button.button--wide type="submit" value="Complete Feedback"
+
+          .col-xs-12.col-sm
             .alert
               p Helpful info text could go here. Or error messages.
 
