@@ -33,6 +33,19 @@ body {
   }
 }
 
+.horizontal-spacer {
+  display: inline-block;
+  margin: 0 $base-spacing;
+
+  &--large {
+    margin: 0 $large-spacing;
+  }
+
+  &--small {
+    margin: 0 $small-spacing;
+  }
+}
+
 .container {
   padding: 0 $base-spacing;
   width: 100%;
@@ -48,4 +61,12 @@ footer {
   flex: 1;
   padding: $large-spacing 0;
   width: 100%;
+}
+
+.align-right {
+  float: right;
+
+  @include media($mobile) {
+    float: none;
+  }
 }

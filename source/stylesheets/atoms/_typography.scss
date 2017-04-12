@@ -87,14 +87,16 @@ hr {
 }
 
 .label-text {
-  font-family: $medium-font-family;
+  font-family: $base-font-family;
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
 .small-text {
+  color: lighten(desaturate($dark-gray, 15), 25);
   font-size: 0.75rem;
+  line-height: 1.2;
 }
 
 .emphasized-text {
@@ -111,4 +113,8 @@ hr {
   font-size: 1.125rem;
   line-height: 1.5;
   margin-bottom: $base-spacing;
+}
+
+.text-align-right {
+  text-align: right;
 }

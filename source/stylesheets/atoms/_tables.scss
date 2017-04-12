@@ -18,9 +18,11 @@ td {
 }
 
 tr td:last-child {
-  padding-bottom: $base-spacing;
-  border-bottom: $base-border;
-  margin-bottom: $small-spacing;
+  @include media($mobile) {
+    border-bottom: $base-border;
+    padding-bottom: $base-spacing;
+    margin-bottom: $small-spacing;
+  }
 }
 
 tbody tr:hover {
