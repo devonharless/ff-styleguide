@@ -57,6 +57,10 @@
       min-height: 65px;
     }
 
+    .avatar {
+      margin: 0 $small-spacing 0 0;
+    }
+
     .nav-links a,
     .dropdown-trigger {
       color: desaturate(lighten($dark-gray, 15), 25);

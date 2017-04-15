@@ -1,0 +1,259 @@
+.nav.nav--global.nav--mobile
+  .container
+    .row.middle-xs
+      .col-xs-2
+        = link_to "#", class: "menu-trigger" do
+          i.icon.icon-menu Menu
+
+      .col-xs-10
+        = link_to "/", class: "logo" do
+          = image_tag "logo/logo-large.png"
+
+    .menu-links
+      = link_to "Team", "#", class: "active"
+      = link_to "Campaigns", "#"
+      = link_to "Kudos", "#"
+      = link_to "Account", "#"
+      = link_to "Link", "#"
+      = link_to "Log out", "#"
+
+.nav.nav--global
+  .container
+    .row.between-xs.middle-xs
+      .col-xs-3
+        = link_to "/", class: "logo" do
+          = image_tag "logo/logo-large.png"
+
+      .col-xs-9
+        .row.middle-xs.end-xs
+          .nav-links.col-xs-6.col-sm-9
+            = link_to "Team", "#", class: "active"
+            = link_to "Campaigns", "#"
+            = link_to "Kudos", "#"
+
+          .dropdown.col-xs-5.col-sm
+            = link_to "#", class: "button button-link dropdown-trigger" do
+              .avatar.avatar--small
+                = image_tag "", alt: "DS"
+
+              ' Username
+              i.icon.icon-down-arrow.icon--action Icon
+
+            .dropdown-menu
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+
+.container
+  .nav.nav--secondary
+    .row.between-sm.middle-sm
+      .col-xs-12.col-sm
+        h1.secondary-headline Debra McMinnville
+
+      .col-xs-12.col-sm
+        .row.middle-xs.end-sm
+          .col-xs
+            = link_to "Kudos", "#kudos"
+            .horizontal-spacer
+            = link_to "Feedback", "#feedback"
+
+  .card.card--large
+    .row
+      .col-xs-12
+        .row
+          .col-xs-12.col-sm-3
+            ul.list-group
+              li.row.middle-xs.center-xs
+                .col-xs
+                  .avatar
+                    = image_tag "", alt: "DM"
+                  .vertical-spacer--small
+                  h2.tertiary-headline
+                    ' Debra McMinnville
+                    br
+                    span.small-text Marketing Team
+
+              li
+                span.label-text
+                  ' Response rate
+                span 27%
+
+              li
+                span.label-text
+                  ' Kudos
+                span 47
+
+              li
+                span.label-text
+                  ' Birthday
+                span 08/22/82
+
+              li
+                span.label-text
+                  ' Hire date
+                span 04/12/13
+
+          .col-xs-12.col-sm-8.col-sm-offset-1
+            .row
+              .col-xs
+                h2.tertiary-headline Charted responses
+              .toggle
+                input#toggle-2.toggle-cb type="checkbox" name="toggle" checked="checked"
+                label.toggle-label for="toggle-2"
+                  .toggle-inner data-active="Week" data-inactive="Month"
+                  .toggle-switch
+
+            = image_tag "placeholder-chart.png"
+
+  #kudos.card
+    .row
+      .col-xs-12.col-sm-4
+        .row.middle-xs.center-xs
+          .col-xs-12
+            = image_tag "illustrations/illustration-kudos.svg", height: "300"
+
+      .col-xs-12.col-sm-8
+        h3.tertiary-headline 47 Kudos Received
+
+        ul.list-group.well
+          li.row.middle-xs
+            .col-xs-2.col-sm-1
+              .avatar.avatar--small
+                = image_tag "", alt: "TB"
+
+            .col-xs-10.col-sm-11
+              .row.between-xs.middle-xs
+                .col-xs
+                  strong Terry Bardshaw
+                .col-xs
+                  p.small-text.text-align-right 03/12/2017
+
+              span.small-text Etiam scelerisque, ex eu commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus. Fusce posuere metus congue, fermentum massa nec, porttitor nun.
+
+          li.row.middle-xs
+            .col-xs-2.col-sm-1
+              .avatar.avatar--small
+                = image_tag "", alt: "TB"
+
+            .col-xs-10.col-sm-11
+              .row.between-xs.middle-xs
+                .col-xs
+                  strong Terry Bardshaw
+                .col-xs
+                  p.small-text.text-align-right 03/12/2017
+
+              span.small-text Etiam scelerisque, ex eu commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus. Fusce posuere metus congue, fermentum massa nec, porttitor nun.
+
+          li.row.middle-xs
+            .col-xs-2.col-sm-1
+              .avatar.avatar--small
+                = image_tag "", alt: "TB"
+
+            .col-xs-10.col-sm-11
+              .row.between-xs.middle-xs
+                .col-xs
+                  strong Terry Bardshaw
+                .col-xs
+                  p.small-text.text-align-right 03/12/2017
+
+              span.small-text Etiam scelerisque, ex eu commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus. Fusce posuere metus congue, fermentum massa nec, porttitor nun.
+
+          li.row.middle-xs
+            .col-xs-2.col-sm-1
+              .avatar.avatar--small
+                = image_tag "", alt: "TB"
+
+            .col-xs-10.col-sm-11
+              .row.between-xs.middle-xs
+                .col-xs
+                  strong Terry Bardshaw
+                .col-xs
+                  p.small-text.text-align-right 03/12/2017
+
+              span.small-text Etiam scelerisque, ex eu commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus. Fusce posuere metus congue, fermentum massa nec, porttitor nun.
+
+        .row.center-xs
+          = link_to "#", class: "button button--outline button--small" do
+            ' See more kudos
+            i.icon.icon-down-arrow.icon--action Down
+
+  .vertical-spacer--large
+
+  .row.between-xs.middle-xs
+    .col-xs-6.col-sm
+      h3.secondary-headline Debra's Feedback
+    .col-xs-6.col-sm-3
+      select
+        option This Week
+        option All
+        option Filter
+        option Filter
+
+  #feedback.card.card--large
+    = link_to "#", class: "row between-xs" do
+      .col-xs
+        span.callout-text Mar 6, 2017
+      span.small-text Collapse
+
+    .row
+      .col-xs-12.col-sm-7
+        ul.list-group
+          li.row.between-xs.middle-xs
+            .col-xs-12.col-sm-10
+              h4.callout-text How was your experience at work this week?
+              p.emphasized-text Wonderful.
+
+            .col-xs-12.col-sm-1
+              = link_to "#", class: "tooltip tooltip--left align-right", data: {"tooltip": "Favorites feedback and sends a thank you email to respondant."} do
+                i.icon.icon-star.icon--disabled.icon--medium Star
+
+          li.row.between-xs.middle-xs
+            .col-xs-12.col-sm-10
+              h4.callout-text What was the best part of your week?
+              p.emphasized-text Etiam scelerisque, ex eu commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus
+
+            .col-xs-12.col-sm-1
+              = link_to "#", class: "tooltip tooltip--left align-right", data: {"tooltip": "Favorites feedback and sends a thank you email to respondant."} do
+                i.icon.icon-star.icon--disabled.icon--medium Star
+
+          li.row.between-xs.middle-xs
+            .col-xs-12.col-sm-10
+              h4.callout-text What was the most challenging part of your week?
+              p.emphasized-text Commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus
+
+            .col-xs-12.col-sm-1
+              = link_to "#", class: "tooltip tooltip--left align-right", data: {"tooltip": "Favorites feedback and sends a thank you email to respondant."} do
+                i.icon.icon-star.icon--disabled.icon--medium Star
+
+          li.row.between-xs.middle-xs
+            .col-xs-12.col-sm-10
+              h4.callout-text What do you hope to improve upon next week?
+              p.emphasized-text Etiam scelerisque, ex eu commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus
+
+            .col-xs-12.col-sm-1
+              = link_to "#", class: "tooltip tooltip--left align-right", data: {"tooltip": "Favorites feedback and sends a thank you email to respondant."} do
+                i.icon.icon-star.icon--disabled.icon--medium Star
+
+      .col-xs-12.col-sm-4.col-sm-offset-1
+        .well.well--success
+          span.label-text Suggestion
+          p Commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus
+
+          span.label-text Impact
+          p Etiam scelerisque, ex eu commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus
+
+    .well
+      = link_to "#", class: "row between-xs middle-xs" do
+        .col-xs
+          span.callout-text Feb 27, 2017
+        .col-xs
+          span.small-text.align-right Expand
+
+    .well
+      = link_to "#", class: "row between-xs middle-xs" do
+        .col-xs
+          span.callout-text Feb 7, 2017
+        .col-xs
+          span.small-text.align-right Expand
