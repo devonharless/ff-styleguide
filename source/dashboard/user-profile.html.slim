@@ -192,68 +192,71 @@
         option Filter
 
   #feedback.card.card--large
-    = link_to "#", class: "row between-xs" do
-      .col-xs
-        span.callout-text Mar 6, 2017
-      span.small-text Collapse
+    ul.list-group
+      li
+        = link_to "#", class: "row between-xs" do
+          .col-xs
+            span.callout-text Mar 6, 2017
+          .col-xs.text-align-right
+          span.small-text Collapse
 
-    .row
-      .col-xs-12.col-sm-7
-        ul.list-group
-          li.row.between-xs.middle-xs
-            .col-xs-12.col-sm-10
-              h4.callout-text How was your experience at work this week?
-              p.emphasized-text Wonderful.
+        .row
+          .col-xs-12.col-sm-7
+            ul.list-group
+              li.row.between-xs.middle-xs
+                .col-xs-12.col-sm-10
+                  h4.callout-text How was your experience at work this week?
+                  p.emphasized-text Wonderful.
 
-            .col-xs-12.col-sm-1
-              = link_to "#", class: "tooltip tooltip--left align-right", data: {"tooltip": "Favorites feedback and sends a thank you email to respondant."} do
-                i.icon.icon-star.icon--disabled.icon--medium Star
+                .col-xs-12.col-sm-1
+                  = link_to "#", class: "tooltip tooltip--left align-right", data: {"tooltip": "Favorites feedback and sends a thank you email to respondant."} do
+                    i.icon.icon-star.icon--disabled.icon--medium Star
 
-          li.row.between-xs.middle-xs
-            .col-xs-12.col-sm-10
-              h4.callout-text What was the best part of your week?
-              p.emphasized-text Etiam scelerisque, ex eu commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus
+              li.row.between-xs.middle-xs
+                .col-xs-12.col-sm-10
+                  h4.callout-text What was the best part of your week?
+                  p.emphasized-text Etiam scelerisque, ex eu commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus
 
-            .col-xs-12.col-sm-1
-              = link_to "#", class: "tooltip tooltip--left align-right", data: {"tooltip": "Favorites feedback and sends a thank you email to respondant."} do
-                i.icon.icon-star.icon--disabled.icon--medium Star
+                .col-xs-12.col-sm-1
+                  = link_to "#", class: "tooltip tooltip--left align-right", data: {"tooltip": "Favorites feedback and sends a thank you email to respondant."} do
+                    i.icon.icon-star.icon--disabled.icon--medium Star
 
-          li.row.between-xs.middle-xs
-            .col-xs-12.col-sm-10
-              h4.callout-text What was the most challenging part of your week?
-              p.emphasized-text Commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus
+              li.row.between-xs.middle-xs
+                .col-xs-12.col-sm-10
+                  h4.callout-text What was the most challenging part of your week?
+                  p.emphasized-text Commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus
 
-            .col-xs-12.col-sm-1
-              = link_to "#", class: "tooltip tooltip--left align-right", data: {"tooltip": "Favorites feedback and sends a thank you email to respondant."} do
-                i.icon.icon-star.icon--disabled.icon--medium Star
+                .col-xs-12.col-sm-1
+                  = link_to "#", class: "tooltip tooltip--left align-right", data: {"tooltip": "Favorites feedback and sends a thank you email to respondant."} do
+                    i.icon.icon-star.icon--disabled.icon--medium Star
 
-          li.row.between-xs.middle-xs
-            .col-xs-12.col-sm-10
-              h4.callout-text What do you hope to improve upon next week?
-              p.emphasized-text Etiam scelerisque, ex eu commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus
+              li.row.between-xs.middle-xs
+                .col-xs-12.col-sm-10
+                  h4.callout-text What do you hope to improve upon next week?
+                  p.emphasized-text Etiam scelerisque, ex eu commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus
 
-            .col-xs-12.col-sm-1
-              = link_to "#", class: "tooltip tooltip--left align-right", data: {"tooltip": "Favorites feedback and sends a thank you email to respondant."} do
-                i.icon.icon-star.icon--disabled.icon--medium Star
+                .col-xs-12.col-sm-1
+                  = link_to "#", class: "tooltip tooltip--left align-right", data: {"tooltip": "Favorites feedback and sends a thank you email to respondant."} do
+                    i.icon.icon-star.icon--disabled.icon--medium Star
 
-      .col-xs-12.col-sm-4.col-sm-offset-1
-        .well.well--success
-          span.label-text Suggestion
-          p Commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus
+          .col-xs-12.col-sm-4.col-sm-offset-1
+            .well.well--success
+              span.label-text Suggestion
+              p Commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus
 
-          span.label-text Impact
-          p Etiam scelerisque, ex eu commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus
+              span.label-text Impact
+              p Etiam scelerisque, ex eu commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus
 
-    .well
-      = link_to "#", class: "row between-xs middle-xs" do
-        .col-xs
-          span.callout-text Feb 27, 2017
-        .col-xs
-          span.small-text.align-right Expand
+      li
+        = link_to "#", class: "row between-xs middle-xs" do
+          .col-xs
+            span.callout-text Feb 27, 2017
+          .col-xs
+            span.small-text.align-right Expand
 
-    .well
-      = link_to "#", class: "row between-xs middle-xs" do
-        .col-xs
-          span.callout-text Feb 7, 2017
-        .col-xs
-          span.small-text.align-right Expand
+      li
+        = link_to "#", class: "row between-xs middle-xs" do
+          .col-xs
+            span.callout-text Feb 7, 2017
+          .col-xs
+            span.small-text.align-right Expand
