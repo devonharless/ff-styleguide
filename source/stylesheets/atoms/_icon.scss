@@ -26,6 +26,14 @@
     background-color: $white;
   }
 
+  &-left-arrow {
+    mask: image-url("icon/icon-right-arrow.svg") no-repeat 0px;
+    mask-size: cover;
+    background-color: $white;
+    transform: rotate(180deg);
+    width: 24px;
+  }
+
   &-link {
     mask: image-url("icon/icon-link.svg") no-repeat 0px;
     mask-size: cover;
@@ -63,6 +71,13 @@
     mask: image-url("icon/icon-up-down-arrows.svg") no-repeat 0px;
     mask-size: cover;
     width: 10px;
+    background-color: $white;
+  }
+
+  &-up-arrow {
+    mask: image-url("icon/icon-down-arrow.svg") no-repeat 0px;
+    mask-size: cover;
+    transform: rotate(180deg);
     background-color: $white;
   }
 
