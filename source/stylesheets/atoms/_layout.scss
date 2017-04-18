@@ -21,6 +21,15 @@ body {
   background: $body-background;
 }
 
+.container {
+  padding: 0 $base-spacing;
+  // width: 100%;
+
+  @include media($mobile) {
+    padding: 0 $base-spacing / 1.5;
+  }
+}
+
 .vertical-spacer {
   margin: $base-spacing 0;
 
@@ -38,20 +47,13 @@ body {
   margin: 0 $base-spacing;
 
   &--large {
+    display: inline-block;
     margin: 0 $large-spacing;
   }
 
   &--small {
+    display: inline-block;
     margin: 0 $small-spacing;
-  }
-}
-
-.container {
-  padding: 0 $base-spacing;
-  width: 100%;
-
-  @include media($mobile) {
-    padding: 0 $base-spacing / 1.5;
   }
 }
 

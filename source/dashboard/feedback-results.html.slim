@@ -80,9 +80,6 @@
 
     .col-xs-8
       .row.end-sm
-        .col-xs
-          = link_to "Export", "#", class: "button button--outline"
-
         .col-xs.col-sm-3
           select
             option Created at (newest)
@@ -100,42 +97,60 @@
     ul.list-group
       li
         = link_to "#", class: "row between-xs middle-xs" do
-          .col-xs
+          .col-xs-12.col-sm
+            .avatar.avatar--small
+              = image_tag "", alt: "SN"
+            .horizontal-spacer--small
             span.callout-text Samantha Nygaard
-          .col-xs
+
+          .col-xs-6.col-sm
             span.small-text Completed 04/11/2017
-          .col-xs.text-align-right
+          .col-xs-6.col-sm.text-align-right
             span.small-text Expand
 
       li
         = link_to "#", class: "row between-xs middle-xs" do
-          .col-xs
+          .col-xs-12.col-sm
+            .avatar.avatar--small
+              = image_tag "", alt: "Na"
+            .horizontal-spacer--small
             span.callout-text First name, last name
-          .col-xs
+
+          .col-xs-6.col-sm
             span.small-text Completed 04/11/2017
-          .col-xs.text-align-right
+          .col-xs-6.col-sm.text-align-right
             span.small-text Expand
 
       li
         = link_to "#", class: "row between-xs middle-xs" do
-          .col-xs
+          .col-xs-12.col-sm
+            .avatar.avatar--small
+              = image_tag "", alt: "Na"
+            .horizontal-spacer--small
             span.callout-text First name, last name
-          .col-xs
+
+          .col-xs-6.col-sm
             span.small-text Completed 04/11/2017
-          .col-xs.text-align-right
+          .col-xs-6.col-sm.text-align-right
             span.small-text Expand
 
       li
         = link_to "#", class: "row between-xs middle-xs" do
-          .col-xs
+          .col-xs-12.col-sm
+            .avatar.avatar--small
+              = image_tag "", alt: "BW"
+
+            .horizontal-spacer--small
             span.callout-text Bob Williams
-          .col-xs
+
+          .col-xs-6.col-sm
             span.small-text Completed 04/11/2017
-          .col-xs.text-align-right
+          .col-xs-6.col-sm.text-align-right
             span.small-text Collapse
 
         .row
           .col-xs-12.col-sm-7
+            .vertical-spacer
             ul.list-group
               li.row.between-xs.middle-xs
                 .col-xs-12.col-sm-10
@@ -220,39 +235,45 @@
 
       li
         = link_to "#", class: "row between-xs middle-xs" do
-          .col-xs
+          .col-xs-12.col-sm
+            .avatar.avatar--small
+              = image_tag "", alt: "Na"
+            .horizontal-spacer--small
             span.callout-text First name, last name
-          .col-xs
+
+          .col-xs-6.col-sm
             span.small-text Completed 04/11/2017
-          .col-xs.text-align-right
+          .col-xs-6.col-sm.text-align-right
             span.small-text Expand
 
       li
         = link_to "#", class: "row between-xs middle-xs" do
-          .col-xs
+          .col-xs-12.col-sm
+            .avatar.avatar--small
+              = image_tag "", alt: "Na"
+            .horizontal-spacer--small
             span.callout-text First name, last name
-          .col-xs
+          .col-xs-6.col-sm
             span.small-text Completed 04/11/2017
-          .col-xs.text-align-right
+          .col-xs-6.col-sm.text-align-right
             span.small-text Expand
 
     .vertical-spacer--large
 
-    .row.center-xs
+    .row.between-xs
       .col-xs-12.col-sm-6
-        .grouped-options.grouped-options--outline.col-xs
+        .grouped-options.grouped-options--outline
           .input-wrapper
             .option
               input#option-1 type="radio" name="option[1]"
-              label for="option-1"
-                i.icon.icon-left-arrow.icon--action Icon
+              label for="option-1" Prev week
 
             .option
               input#option-2 type="radio" name="option[1]"
               label for="option-2" 2
 
             .option
-              input#option-3 type="radio" name="option[1]" checked="checked"
+              input#option-3 type="radio" name="option[1]"
               label for="option-3" 3
 
             .option
@@ -260,10 +281,12 @@
               label for="option-4" 4
 
             .option
-              input#option-5 type="radio" name="option[1]" checked="checked"
+              input#option-5 type="radio" name="option[1]"
               label for="option-5" 5
 
             .option
               input#option-6 type="radio" name="option[1]"
-              label for="option-6"
-                i.icon.icon-right-arrow.icon--action Icon
+              label for="option-6" Next week
+
+      .col-xs-12.col-sm.text-align-right
+        = link_to "Export", "#", class: "button button--outline button--highlight"
