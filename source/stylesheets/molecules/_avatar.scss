@@ -7,21 +7,23 @@
   display: inline-block;
   margin: 0;
   overflow: hidden;
+  position: relative;
   text-align: center;
   vertical-align: middle;
 
   img {
     @include size(3.75rem);
-    position: relative;
   }
 
-  img:before {
+  span {
     @include position(absolute, null 0px null 0px);
     background: $highlight-color;
-    content: attr(alt);
     color: $white;
+    display: block;
     line-height: 3.75rem;
     text-transform: uppercase;
+    height: 100%;
+    width: 100%;
   }
 
   &--small {
@@ -32,7 +34,7 @@
       @include size(2.5rem);
     }
 
-    img:before {
+    span {
       line-height: 2rem;
     }
   }
@@ -45,7 +47,7 @@
       @include size(5rem);
     }
 
-    img:before {
+    span {
       line-height: 5rem;
     }
   }

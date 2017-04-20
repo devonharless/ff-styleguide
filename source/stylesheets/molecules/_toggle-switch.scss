@@ -40,7 +40,7 @@
     &:after {
       background-color: desaturate(darken($action-color, 10), 35);
       content: attr(data-inactive);
-      padding-right: $small-spacing * 1.2;
+      padding-right: $small-spacing / 1.2;
       text-align: right;
     }
 

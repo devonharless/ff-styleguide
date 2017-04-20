@@ -6,79 +6,126 @@
   vertical-align: middle;
 
   &-check {
-    mask: image-url("icon/icon-check.svg") no-repeat center;
-    mask-size: cover;
-    background-color: $white;
+    background: transparent image-url("icon/icon-check.svg") no-repeat center;
+    background-size: cover;
     width: 21px;
     height: 15px;
   }
 
   &-close {
     @include size(12px);
-    mask: image-url("icon/icon-close.svg") no-repeat 100% 100%;
-    mask-size: cover;
-    background-color: $white;
+    background: transparent image-url("icon/icon-close.svg") no-repeat 100% 100%;
+    background-size: cover;
   }
 
   &-down-arrow {
-    mask: image-url("icon/icon-down-arrow.svg") no-repeat 0px;
-    mask-size: cover;
-    background-color: $white;
+    background: transparent image-url("icon/icon-down-arrow.svg") no-repeat 0px;
+    background-size: cover;
   }
 
   &-left-arrow {
-    mask: image-url("icon/icon-right-arrow.svg") no-repeat 0px;
-    mask-size: cover;
-    background-color: $white;
-    transform: rotate(180deg);
-    width: 24px;
+    background: image-url("icon/icon-left-arrow.svg") no-repeat 0px;
+    background-size: cover;
+    height: 12px;
+    width: 13px;
   }
 
   &-link {
-    mask: image-url("icon/icon-link.svg") no-repeat 0px;
-    mask-size: cover;
-    background-color: $white;
+    background: image-url("icon/icon-link.svg") no-repeat 0px;
+    background-size: cover;
     width: 20px;
   }
 
   &-menu {
     @include size(40px);
-    mask: image-url("icon/icon-menu.svg") no-repeat 0px;
-    mask-size: cover;
-    background-color: $action-color;
+    background: image-url("icon/icon-menu.svg") no-repeat 0px;
+    background-size: cover;
   }
 
   &-right-arrow {
-    mask: image-url("icon/icon-right-arrow.svg") no-repeat 0px;
-    mask-size: cover;
-    background-color: $white;
+    background: image-url("icon/icon-right-arrow.svg") no-repeat 0px;
+    background-size: cover;
     width: 24px;
   }
 
   &-search {
-    mask: image-url("icon/icon-search.svg") no-repeat 0px;
-    mask-size: cover;
-    background-color: $white;
+    background: image-url("icon/icon-search.svg") no-repeat 0px;
+    background-size: cover;
   }
 
   &-star {
-    mask: image-url("icon/icon-star.svg") no-repeat 0px;
-    mask-size: cover;
-    background-color: $white;
+    background: image-url("icon/icon-star.svg") no-repeat 0px;
+    background-size: cover;
   }
 
   &-up-down-arrows {
-    mask: image-url("icon/icon-up-down-arrows.svg") no-repeat 0px;
-    mask-size: cover;
+    background: image-url("icon/icon-up-down-arrows.svg") no-repeat 0px;
+    background-size: cover;
     width: 10px;
-    background-color: $white;
   }
 
   &-up-arrow {
-    mask: image-url("icon/icon-down-arrow.svg") no-repeat 0px;
-    mask-size: cover;
+    background: image-url("icon/icon-down-arrow.svg") no-repeat 0px;
+    background-size: cover;
     transform: rotate(180deg);
-    background-color: $white;
+  }
+
+  // White icons
+
+  &--white {
+    &.icon-check {
+      background: transparent image-url("icon/icon-check-white.svg") no-repeat center;
+      background-size: cover;
+    }
+
+    &.icon-close {
+      background: transparent image-url("icon/icon-close-white.svg") no-repeat 100% 100%;
+      background-size: cover;
+    }
+
+    &.icon-down-arrow {
+      background: transparent image-url("icon/icon-down-arrow-white.svg") no-repeat 0px;
+      background-size: cover;
+    }
+
+    &.icon-left-arrow {
+      background: image-url("icon/icon-left-arrow-white.svg") no-repeat 0px;
+      background-size: cover;
+    }
+
+    &.icon-right-arrow {
+      background: image-url("icon/icon-right-arrow-white.svg") no-repeat 0px;
+      background-size: cover;
+    }
+
+    &.icon-link {
+      background: image-url("icon/icon-link-white.svg") no-repeat 0px;
+      background-size: cover;
+    }
+
+    &.icon-search {
+      background: image-url("icon/icon-search-white.svg") no-repeat 0px;
+      background-size: cover;
+    }
+
+    &.icon-star {
+      background: image-url("icon/icon-star-white.svg") no-repeat 0px;
+      background-size: cover;
+    }
+
+    &.icon-up-down-arrows {
+      background: image-url("icon/icon-up-down-arrows-white.svg") no-repeat 0px;
+      background-size: cover;
+    }
+
+    &.icon-up-arrow {
+      background: image-url("icon/icon-down-arrow-white.svg") no-repeat 0px;
+      background-size: cover;
+    }
+  }
+
+  &--disabled {
+    opacity: 0.5;
   }
 
   //Size
@@ -92,30 +139,5 @@
 
   &--large {
     @include size(50px);
-  }
-
-  // Mask color manipulation
-  &--action {
-    background-color: $action-color;
-  }
-
-  &--default {
-    background-color: $midnight;
-  }
-
-  &--disabled {
-    background-color: $medium-gray;
-  }
-
-  &--error {
-    background-color: $error-color;
-  }
-
-  &--success {
-    background-color: $success-color;
-  }
-
-  &--warning {
-    background-color: $warning-color;
   }
 }
