@@ -40,8 +40,8 @@ h3#buttons.secondary-headline Buttons
 .row
   .col-xs-12.col-sm-4
     = link_to "#", class: "button" do
-      i.icon.icon-check
-      | Icon
+      i.icon.icon-check.icon--white Close
+      ' Icon
 
 .vertical-spacer--small
 
@@ -51,13 +51,13 @@ h3#buttons.secondary-headline Buttons
 
   .col-xs-6.col-sm-4
     = link_to "#", class: "button button-link" do
-      i.icon.icon-close.icon--error Icon
+      i.icon.icon-close Icon
       '  Remove
 
   .col-xs-6.col-sm-4
     = link_to "#", class: "button button-link" do
       | See more
-      i.icon.icon-down-arrow.icon--action Icon
+      i.icon.icon-down-arrow Icon
 
 .vertical-spacer--small
 
@@ -70,7 +70,7 @@ h3#buttons.secondary-headline Buttons
   .col-xs-6.col-sm-4
     = link_to "#", class: "button button-link" do
       | Next
-      i.icon.icon-right-arrow.icon--default Icon
+      i.icon.icon-right-arrow Icon
 
 .vertical-spacer--small
 
@@ -83,7 +83,7 @@ h3#buttons.secondary-headline Buttons
 
   .col-xs-6.col-sm-4
     = link_to "#", class: "button button--large" do
-      i.icon.icon-check
+      i.icon.icon-check.icon--white
       '  Large Icon
 
 .vertical-spacer--small
@@ -97,5 +97,5 @@ h3#buttons.secondary-headline Buttons
 
   .col-xs-4
     = link_to "#", class: "button button--small" do
-      i.icon.icon-check.icon--small
+      i.icon.icon-check.icon--small.icon--white
       '  Small Icon

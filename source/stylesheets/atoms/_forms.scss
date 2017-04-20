@@ -22,7 +22,8 @@ label {
 
 input,
 select,
-textarea {
+textarea,
+.selectize-input {
   display: block;
   font-family: $base-font-family;
   font-size: $base-font-size;
@@ -30,15 +31,20 @@ textarea {
 }
 
 #{$all-text-inputs},
-select {
+select,
+.selectize-input,
+.selectize-control.single .selectize-input {
   appearance: none;
   background-color: $base-background-color;
+  background: $white;
+  background-image: none;
   border: 1px solid shade($base-border-color, 5);
   border-radius: $base-border-radius;
+  box-shadow: none;
   box-sizing: border-box;
   line-height: 1;
   margin-bottom: $small-spacing;
-  padding: $small-spacing $base-spacing / 2;
+  padding: 0.5625rem $base-spacing / 2;
   transition: border-color $base-duration $base-timing;
   width: 100%;
 
@@ -48,11 +54,13 @@ select {
 
   &:focus {
     border-color: $action-color;
+    box-shadow: none;
     outline: none;
   }
 
   &:focus-inner {
     border: 0;
+    box-shadow: none;
     padding: 0;
   }
 
@@ -86,7 +94,8 @@ textarea {
   width: 100%;
 }
 
-select {
+select,
+.selectize-control.single .selectize-input {
   background: $white image-url("icon/icon-up-down-arrows.svg") right 8px center no-repeat;
   background-size: 8px;
   margin-bottom: $small-spacing;
@@ -95,6 +104,24 @@ select {
 
 select[multiple] {
   background-image: none;
+}
+
+// Selectize overrides
+.selectize-input,
+.selectize-control.single .selectize-input {
+  margin-bottom: 0;
+}
+
+.selectize-control.single .selectize-input:after {
+  display: none;
+}
+
+.selectize-control.multi .selectize-input.has-items {
+  padding: 0.375rem $base-spacing / 2;
+}
+
+.selectize-control.multi .selectize-input [data-value] {
+  margin-bottom: 0;
 }
 
 .input--inline {
@@ -115,6 +142,7 @@ select[multiple] {
   input {
     margin: 0;
     border: none;
+    border-radius: 0;
   }
 
   .button {

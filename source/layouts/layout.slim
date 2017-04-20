@@ -7,15 +7,15 @@ html
 
     title = current_page.data.title || "Friday Feedback Styleguide"
 
-    link href='//fonts.googleapis.com/css?family=Catamaran:200,400,500,700' rel='stylesheet' type='text/css'
-
     link href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" rel="stylesheet" type="text/css"
 
     script src="https://use.typekit.net/yvd5vdt.js"
     script try{Typekit.load({ async: true });}catch(e){}
 
+    == stylesheet_link_tag "selectize"
     == stylesheet_link_tag :site
     == javascript_include_tag "jquery"
+    script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/js/standalone/selectize.min.js"
 
   body
     section.hero
@@ -67,14 +67,14 @@ html
     .overlay
       #default-modal.modal
         = link_to '#', class: "close-modal-trigger" do
-          i.icon.icon-close.icon--action.icon--medium Close
+          i.icon.icon-close.icon--medium Close
 
         h1.primary-headline Modal headline
         p Aliquam id varius felis, eu iaculis mauris. Curabitur in efficitur massa. Fusce scelerisque justo vel leo ultrices egestas.
 
       #small-modal.modal.modal--small
         = link_to '#', class: "close-modal-trigger" do
-          i.icon.icon-close.icon--action.icon--medium Close
+          i.icon.icon-close.icon--medium Close
         h1.secondary-headline Small modal
         p Aliquam id varius felis, eu iaculis mauris. Curabitur in efficitur massa. Fusce scelerisque justo vel leo ultrices egestas.
 
@@ -85,6 +85,9 @@ html
       $(".dropdown-trigger").on("click", toggleDropdown);
       $(".modal-trigger").on("click", toggleModal);
       $(".close-modal-trigger").on("click", dismissModal);
+
+      //Selectize
+      $('.selectize').selectize();
     });
 
     function toggleModal(e) {

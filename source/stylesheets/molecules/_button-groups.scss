@@ -11,8 +11,8 @@
 
   .option {
     align-items: center;
-    background-color: rgba(desaturate($action-color, 20), 0.25);
-    border-right: 2px solid $base-border-color;
+    background-color: rgba(desaturate($action-color, 20), 0.15);
+    border-right: 1px solid rgba(desaturate($action-color, 20), 0.25);
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -32,19 +32,15 @@
     }
 
     &:hover {
-      background: lighten($action-color, 10);
       opacity: 1;
-
-      label {
-        color: $white;
-      }
     }
   }
 
   label {
+    align-items: center;
+    color: $midnight;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     line-height: 1;
     height: 100%;
@@ -68,6 +64,14 @@
     padding: 0;
     z-index: 2;
 
+    &:hover + label {
+      color: $action-color;
+    }
+
+    &:hover:checked + label {
+      color: $white;
+    }
+
     &:checked + label,
     &:checked + label span {
       background: $action-color;
@@ -84,12 +88,11 @@
 
   .option {
     border-width: 1px;
-    border-right-color: $action-color;
+    border-right: 1px solid $action-color;
     background: none;
 
     &:hover {
       background: rgba($action-color, 0.2);
-      color: $white;
 
       label {
         color: $action-color;
@@ -98,19 +101,50 @@
   }
 
   label {
-    color: $action-color;
-
-    &:hover {
-      color: shade($action-color, 20);
-    }
+    color: $midnight;
   }
 
   input {
+    &:hover:checked + label {
+      color: $midnight;
+    }
+
     &:checked + label,
-    &:checked + label {
+    &:checked + label span {
       background: rgba($action-color, 0.5);
       border: none;
-      color: shade($action-color, 45);
+      color: $midnight;
+    }
+  }
+}
+
+.grouped-options--colorized {
+  .input-wrapper {
+    background: linear-gradient(to right, rgba($red, 0.6), rgba($warning-color, 0.6), rgba($success-color, 0.6));
+  }
+
+  .option {
+    background: none;
+    border-right-color: $white;
+  }
+
+  label {
+    color: $white;
+  }
+
+  input {
+    &:hover + label {
+      color: $midnight;
+    }
+
+    &:hover:checked + label {
+      color: $midnight;
+    }
+
+    &:checked + label,
+    &:checked + label span {
+      background: none;
+      border: 2px solid darken($action-color, 10);
     }
   }
 }
