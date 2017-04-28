@@ -1,14 +1,81 @@
 .hero {
   align-items: center;
-  background: $hero-background;
+  background: $action-color;
   color: $white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 200px;
+  overflow: hidden;
+  position: relative;
   width: 100%;
+
+  .container {
+    z-index: 2;
+  }
+
+  &--large {
+    align-items: flex-end;
+    background: linear-gradient(90deg, $sky-blue, saturate($action-color, 0.3), $emerald);
+    min-height: calc(100vh + 65px);
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+  }
 
   @include media($mobile) {
     min-height: none;
+  }
+}
+
+.stripes {
+  @include size(100%);
+  bottom: 260px;
+  position: absolute;
+  transform: skewY(-12deg);
+  z-index: 1;
+
+  .stripe {
+    position: absolute;
+    height: 190px;
+  }
+
+  .s1 {
+    background: linear-gradient(90deg, rgba(67,67,141,.05), rgba(67,67,141,.1));
+    bottom: 380px;
+    left: 16%;
+    width: 41%;
+  }
+
+  .s2 {
+    bottom: -250px;
+    left: 0;
+    height: 400px;
+    width: 27%;
+    background: linear-gradient(90deg,rgba($sky-blue, 0.7),rgba($action-color, 0.2));
+  }
+
+  .s3 {
+    bottom: 100px;
+    right: 0;
+    width: 30%;
+    background: linear-gradient(90deg,rgba($emerald, 0.2),$action-color);
+  }
+
+  .s4 {
+    right: calc(50% + 90px);
+    min-width: 430px;
+    height: 291px;
+    bottom: -409px;
+    left: 0;
+    background: linear-gradient(90deg,$action-color, rgba($emerald, 0.5));
+  }
+
+  .s5 {
+    height: 291px;
+    bottom: -189px;
+    right: 0;
+    width: 46%;
+    background: linear-gradient(90deg,transparent,$emerald);
   }
 }

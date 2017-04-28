@@ -33,6 +33,14 @@ body {
 .vertical-spacer {
   margin: $base-spacing 0;
 
+  &--xlarge {
+    margin: $large-spacing * 2 0;
+
+    @include media($mobile) {
+      margin: $large-spacing 0;
+    }
+  }
+
   &--large {
     margin: $large-spacing 0;
   }

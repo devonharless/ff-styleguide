@@ -1,0 +1,277 @@
+.nav.nav--global.nav--mobile
+  .container
+    .row.middle-xs
+      .col-xs-2
+        = link_to "#", class: "menu-trigger" do
+          i.icon.icon-menu Menu
+
+      .col-xs-10
+        = link_to "/", class: "logo" do
+          = image_tag "logo/logo-large.png"
+
+    .menu-links
+      = link_to "Product", "#"
+      = link_to "Customers", "#"
+      = link_to "Sign In", "#"
+      = link_to "Request Demo", "#"
+
+.nav.nav--global.nav--light
+  .container
+    .row.between-xs.middle-xs
+      .col-xs-3
+        = link_to "/", class: "logo" do
+          = image_tag "logo/logo-large-white.png"
+
+      .col-xs-9
+        .row.middle-xs.end-xs
+          .nav-links.col-xs
+            = link_to "Product", "#"
+            = link_to "Customers", "#"
+            = link_to "Request Demo", "#"
+          .col-xs-2
+            = link_to "#", class: "button button-link" do
+              ' Sign Up
+              i.icon.icon-right-arrow.icon--white Right
+
+section.hero.hero--large
+  .stripes
+
+  .container
+    .row.center-xs
+      .content
+        h2.xlarge-headline Understand Your Team
+        h3.tertiary-headline See how your team is feeling, what they are doing, and who is a star among their peers.
+
+        .vertical-spacer
+
+        = link_to "Get Started For Free", "#", class: "button button--large button--light"
+
+        .vertical-spacer--large
+
+      = image_tag "http://placehold.it/800x450"
+
+section
+  .container
+    .vertical-spacer--large
+
+    .row.top-sm.center-sm
+      .col-xs-12.col-sm-3
+        = image_tag "icon/icon-user-group.svg", width: "55px"
+
+        .vertical-spacer--small
+
+        h5.secondary-headline 1-1 meeting complement.
+        p.callout-block-text What were the highlights of someone's week? What were the challenges they faced? Who is a star among their peers? We unlock these insights on a weekly basis for you.
+
+      .col-xs-12.col-sm-1
+        .horizontal-spacer
+
+      .col-xs-12.col-sm-3
+        = image_tag "icon/icon-pie-chart.svg", width: "50px"
+
+        .vertical-spacer--small
+
+        h5.secondary-headline Discover new insights.
+        p.callout-block-text You can't be everywhere at once. Stop relying on your own personal observations when leading a team. We can help collect new insights - no extra meetings required.
+
+      .col-xs-12.col-sm-1
+        .horizontal-spacer
+
+      .col-xs-12.col-sm-3
+        = image_tag "icon/icon-crown.svg", width: "55px"
+
+        .vertical-spacer--small
+
+        h5.secondary-headline Become a better leader.
+        p.callout-block-text Want a promotion? Build a highly productive team. We'll make it happen by delivering the insights you need to succeed.
+
+section
+  .container
+    hr
+    .vertical-spacer--xlarge
+
+    .row.middle-sm
+      .col-xs-12.col-sm-4
+        h5.secondary-headline Recognition matters.
+        p.callout-block-text 79% of employees who quit their jobs cite a lack of appreciation as a key reason for leaving. That's not going to happen anymore.
+
+        .vertical-spacer--large
+
+        h5.secondary-headline Build a culture of saying "thank you."
+        p.callout-block-text Every week, your team has the opportunity to recognize others for going the extra-mile. Let us help you build a culture of recognition across your team and throughout the organization.
+
+      .col-xs-12.col-sm-7.col-sm-offset-1
+        = image_tag "http://placehold.it/500x300", width: "100%"
+
+    .vertical-spacer--xlarge
+
+section.color-highlight
+  .container
+    .vertical-spacer--xlarge
+
+    .row.middle-sm
+      .col-xs-12.col-sm-7
+        = image_tag "http://placehold.it/500x300", width: "100%"
+
+      .col-xs-12.col-sm-4.col-sm-offset-1
+        h5.secondary-headline A profile for each person.
+        p.callout-block-text Activity rolls-up under an employee profile. This extra-layer of insight helps you coach each person according to their strengths.
+
+        .vertical-spacer--large
+
+        h5.secondary-headline Tailor the employee experience.
+        p.callout-block-text How can you build a productive team if you don't know (or can't remember) key information about each of them? We can help with that.
+
+    .vertical-spacer--xlarge
+
+section
+  .container
+    .vertical-spacer--xlarge
+
+    .row.middle-sm
+      .col-xs-12.col-sm-4
+        h5.secondary-headline Identify team trends.
+        p.callout-block-text How's the team doing over time? Stop relying on intuition, start measuring instead.
+
+        .vertical-spacer--large
+
+        h5.secondary-headline Segment by teams.
+        p.callout-block-text If you lead many teams, quickly visualize and segment data by team. View scorecards to understand how a team compares to the rest of the organization.
+
+      .col-xs-12.col-sm-7.col-sm-offset-1
+        = image_tag "http://placehold.it/500x300", width: "100%"
+
+    .vertical-spacer--xlarge
+
+section.hero
+  .stripes
+    .stripe.s1
+    .stripe.s2
+    .stripe.s4
+    .stripe.s5
+
+  .container
+    .vertical-spacer--xlarge
+    .row.middle-xs.center-xs
+      .col-xs-12.col-sm-8
+        p.secondary-headline According to Gallup, managers account for at least 70% of variance in employee engagement scores. Friday Feedback is software for leaders who want to improve engagement and productivity at the team level.
+
+        .vertical-spacer
+
+        = link_to "Try it Free", "#", class: "button button--outline button--light button--large"
+    .vertical-spacer--xlarge
+
+section
+  .container
+    .vertical-spacer--large
+
+    .row.middle-xs.center-xs
+      .col-xs-4.col-sm-2
+        = image_tag "http://placehold.it/100x40", width: "100%"
+      .col-xs-4.col-sm-2
+        = image_tag "http://placehold.it/100x40", width: "100%"
+      .col-xs-4.col-sm-2
+        = image_tag "http://placehold.it/100x40", width: "100%"
+      .col-xs-4.col-sm-2
+        = image_tag "http://placehold.it/100x40", width: "100%"
+      .col-xs-4.col-sm-2
+        = image_tag "http://placehold.it/100x40", width: "100%"
+      .col-xs-4.col-sm-2
+        = image_tag "http://placehold.it/100x40", width: "100%"
+
+    .vertical-spacer--large
+    hr
+
+    .vertical-spacer--large
+
+    .row.center-xs
+      .col-xs-12
+        h3.primary-headline What People Are Saying...
+
+      .col-xs-12.col-sm-6
+        .row.center-xs.middle-xs
+          .col-xs-2.col-sm-2
+            .avatar
+              = image_tag "http://loremflickr.com/200/200/ceo"
+
+          .col-xs-12.col-sm-10
+            .well.well--highlight
+              p.callout-block-text Friday Feedback gives us a platform to have constructive discussions when we have our team one-to-ones. Imagine the cost of losing a team member or having someone in a funk not being productive?"
+
+              p
+                ' Chris Hexton, CEO @
+                = link_to "Vero", "https://www.getvero.com/", target: "_blank"
+
+      .col-xs-12.col-sm-6
+        .row.middle-xs.center-xs
+          .col-xs-2.col-sm-2
+            .avatar
+              = image_tag "http://loremflickr.com/200/200/ceo"
+
+          .col-xs-12.col-sm-10
+            .well.well--highlight
+              p.callout-block-text Friday Feedback gives everyone the opportunity to reflect on the help of their teammates and to give thanks.
+              p
+                ' Shani Podl, Vice President @
+                = link_to "Doran Scales", "http://doranscales.com", target: "_blank"
+
+    .vertical-spacer--large
+
+footer
+  .container
+    .vertical-spacer--large
+
+    .row.top-xs
+      .col-xs-12.col-sm-2
+        = link_to "/", class: "logo" do
+          = image_tag "logo/logo-large.png", width: "200px"
+
+        p.small-text
+          ' &copy; 2017
+
+      .col-xs-12.col-sm-3.col-sm-offset-1
+        h4.tertiary-headline Resources
+
+        ul
+          li
+            = link_to "Link", "#"
+          li
+            = link_to "Link", "#"
+          li
+            = link_to "Link", "#"
+          li
+            = link_to "Link", "#"
+
+        .vertical-spacer--small
+
+      .col-xs-12.col-sm-3
+        h4.tertiary-headline Guides
+
+        ul
+          li
+            = link_to "Getting Started with Pulse Surveys", "#"
+          li
+            = link_to "Link", "#"
+          li
+            = link_to "Link", "#"
+          li
+            = link_to "Link", "#"
+          li
+            = link_to "Link", "#"
+          li
+            = link_to "Link", "#"
+        .vertical-spacer--small
+
+      .col-xs-12.col-sm-3
+        h4.tertiary-headline Company
+
+        ul
+          li
+            = link_to "Link", "#"
+          li
+            = link_to "Link", "#"
+          li
+            = link_to "Link", "#"
+          li
+            = link_to "Link", "#"
+        .vertical-spacer--small

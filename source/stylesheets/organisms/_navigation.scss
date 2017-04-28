@@ -104,4 +104,34 @@
       }
     }
   }
+
+  &--light {
+    background: none;
+    border-bottom: none;
+    box-shadow: none;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    left: 0px;
+
+    .nav-links a,
+    .button {
+      color: $white;
+    }
+
+    .button:hover {
+      .icon {
+        opacity: 0.7;
+      }
+    }
+
+    .nav-links a {
+      transition: all 0.2s linear;
+
+      &:hover {
+        box-shadow: 0 3px 0 0 darken($action-color, 20);
+      }
+    }
+  }
 }
