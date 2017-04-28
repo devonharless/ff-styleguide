@@ -7,10 +7,16 @@
 
 .color-primary {
   background: $action-color;
+  color: $white;
 }
 
 .color-highlight {
   background: $highlight-color;
+  color: $white;
+
+  p {
+    color: rgba($white, 0.8);
+  }
 }
 
 .color-success {

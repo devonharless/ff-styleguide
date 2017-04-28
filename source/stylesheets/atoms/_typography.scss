@@ -67,10 +67,19 @@ hr {
   }
 }
 
+.xlarge-headline {
+  font-family: $thin-font-family;
+  font-size: 2.5rem;
+  font-weight: 200;
+  margin-bottom: $small-spacing;
+  letter-spacing: 0.06rem;
+}
+
 .primary-headline {
   font-family: $thin-font-family;
   font-size: 1.75rem;
   font-weight: 200;
+  line-height: 1.5;
   margin-bottom: $small-spacing;
 }
 
@@ -109,7 +118,7 @@ hr {
 }
 
 .callout-block-text {
-  color: lighten(desaturate($dark-gray, 20), 20);
+  color: darken(desaturate($sky-blue, 40), 5);
   font-size: 1.125rem;
   line-height: 1.5;
   margin-bottom: $base-spacing;
