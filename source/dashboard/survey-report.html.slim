@@ -1,0 +1,356 @@
+.nav.nav--global.nav--mobile
+  .container
+    .row.middle-xs
+      .col-xs-2
+        = link_to "#", class: "menu-trigger" do
+          i.icon.icon-menu Menu
+
+      .col-xs-10
+        = link_to "/", class: "logo" do
+          = image_tag "logo/logo-large.png"
+
+    .menu-links
+      = link_to "Team", "#", class: "active"
+      = link_to "Campaigns", "#"
+      = link_to "Kudos", "#"
+      = link_to "Account", "#"
+      = link_to "Link", "#"
+      = link_to "Log out", "#"
+
+.nav.nav--global
+  .container
+    .row.between-xs.middle-xs
+      .col-xs-3
+        = link_to "/", class: "logo" do
+          = image_tag "logo/logo-large.png"
+
+      .col-xs-9
+        .row.middle-xs.end-xs
+          .nav-links.col-xs-6.col-sm-9
+            = link_to "Team", "#", class: "active"
+            = link_to "Campaigns", "#"
+            = link_to "Kudos", "#"
+
+          .dropdown.col-xs-5.col-sm
+            = link_to "#", class: "button button-link dropdown-trigger" do
+              .avatar.avatar--small
+                span DS
+
+              ' Username
+              i.icon.icon-down-arrow Icon
+
+            .dropdown-menu
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+
+.container
+  .nav.nav--secondary
+    .row.between-sm.middle-sm
+      .col-xs-12.col-sm-9
+        h1.secondary-headline Company Engagement Survey Report
+      .col-xs-12.col-sm-3
+        select
+          option Company Results
+          option Team A Results
+          option Team B Results
+          option Team C Results
+
+  .card.card--large
+    h3.tertiary-headline Company Results
+
+    .row
+      .col-xs-12.col-sm-3
+        .well.well--small.well--success
+          .row
+            .col-xs-6
+              span.label-text Total Score
+              p.secondary-headline 4.36
+
+            .col-xs-6
+              span.label-text Completed
+              p.secondary-headline
+                ' 70%
+                span.small-text
+                  ' (9 of 13)
+
+    ul.list-group
+      li.row.hidden-xs.small-xs.small-xs
+        .col-sm-5
+          span.label-text Survey Question
+        .col-sm-2
+          span.label-text Comments
+        .col-sm-2
+          span.label-text
+            ' Score
+          span.small-text
+            ' (total responders)
+        .col-sm-3.text-align-right
+          span.label-text
+            ' Percentage
+          span.small-text
+            ' (responders)
+
+      li.row.between-xs
+        .col-xs-8.col-sm-5
+          span.callout-text
+            ' Q1:
+          span Nulla maximus dolor sed nisi elementum luctus?
+
+        .col-xs-4.col-sm-2
+          = link_to "1 comment", "#"
+
+        .col-xs-2.col-sm-1
+          span.callout-text
+            ' 3.66
+          span.small-text
+            ' (10)
+
+        .graphs.col-xs-10.col-sm-4.text-align-right
+          .row
+            .col-xs-5.col-sm-6
+              span.small-text Strongly agree
+            .col-xs-6.col-sm-5
+              span.small-text
+                ' 10%
+              .graph-bar
+                span style="width: 10%"
+            .col-xs-1.col-sm-1
+              span.small-text
+                ' (1)
+
+          .row
+            .col-xs-5.col-sm-6
+              span.small-text Agree
+            .col-xs-6.col-sm-5
+              span.small-text
+                ' 50%
+              .graph-bar
+                span style="width: 50%"
+            .col-xs-1.col-sm-1
+              span.small-text
+                ' (5)
+
+          .row
+            .col-xs-5.col-sm-6
+              span.small-text Neutral
+            .col-xs-6.col-sm-5
+              span.small-text
+                ' 30%
+              .graph-bar
+                span style="width: 30%"
+            .col-xs-1.col-sm-1
+              span.small-text
+                ' (3)
+
+          .row
+            .col-xs-5.col-sm-6
+              span.small-text Disagree
+            .col-xs-6.col-sm-5
+              span.small-text
+                ' 10%
+              .graph-bar
+                span style="width: 10%"
+            .col-xs-1.col-sm-1
+              span.small-text
+                ' (1)
+
+          .row
+            .col-xs-5.col-sm-6
+              span.small-text Strongly disagree
+            .col-xs-6.col-sm-5
+              span.small-text
+                ' 0%
+              .graph-bar
+                span style="width: 0%"
+            .col-xs-1.col-sm-1
+              span.small-text
+                ' (0)
+
+      li.row.between-xs
+        .col-xs-8.col-sm-5
+          span.callout-text
+            ' Q2:
+          span Nulla maximus dolor sed nisi elementum luctus?
+
+        .col-xs-4.col-sm-2
+          = link_to "2 comments", "#"
+
+        .col-xs-2.col-sm-1
+          span.callout-text
+            ' 4.33
+          span.small-text
+            ' (10)
+
+        .graphs.col-xs-10.col-sm-4.text-align-right
+          .row
+            .col-xs-5.col-sm-6
+              span.small-text Strongly agree
+            .col-xs-6.col-sm-5
+              span.small-text
+                ' 80%
+              .graph-bar
+                span style="width: 80%"
+            .col-xs-1.col-sm-1
+              span.small-text
+                ' (8)
+
+          .row
+            .col-xs-5.col-sm-6
+              span.small-text Agree
+            .col-xs-6.col-sm-5
+              span.small-text
+                ' 20%
+              .graph-bar
+                span style="width: 20%"
+            .col-xs-1.col-sm-1
+              span.small-text
+                ' (2)
+
+          .row
+            .col-xs-5.col-sm-6
+              span.small-text Neutral
+            .col-xs-6.col-sm-5
+              span.small-text
+                ' 0%
+              .graph-bar
+                span style="width: 0%"
+            .col-xs-1.col-sm-1
+              span.small-text
+                ' (0)
+
+          .row
+            .col-xs-5.col-sm-6
+              span.small-text Disagree
+            .col-xs-6.col-sm-5
+              span.small-text
+                ' 0%
+              .graph-bar
+                span style="width: 0%"
+            .col-xs-1.col-sm-1
+              span.small-text
+                ' (0)
+
+          .row
+            .col-xs-5.col-sm-6
+              span.small-text Strongly disagree
+            .col-xs-6.col-sm-5
+              span.small-text
+                ' 0%
+              .graph-bar
+                span style="width: 0%"
+            .col-xs-1.col-sm-1
+              span.small-text
+                ' (0)
+
+        .well.well--highlight.well--small
+          .row.middle-xs.between-sm
+            .col-xs-12
+              ul.list-group
+                li.row
+                  .col-xs
+                    h3.label-text Comments
+                  .col-xs
+                    p.small-text.text-align-right 06/12/2017
+
+                li.row.middle-xs
+                  .col-xs-2.col-sm-1
+                    .avatar
+                      span TB
+
+                  .col-xs-10.col-sm-10
+                    .row.between-xs.middle-xs
+                      .col-xs
+                        strong Terry Bardshaw
+
+                    span Etiam scelerisque, ex eu commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus. Fusce posuere metus congue, fermentum massa nec, porttitor nun.
+
+                li.row.middle-xs
+                  .col-xs-2.col-sm-1
+                    .avatar
+                      span BL
+
+                  .col-xs-10.col-sm-10
+                    .row.between-xs.middle-xs
+                      .col-xs
+                        strong Bill Langley
+
+                    span Commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus. Fusce posuere metus congue, fermentum massa.
+
+      li.row.between-xs
+        .col-xs-8.col-sm-5
+          span.callout-text
+            ' Q3:
+          span Nulla maximus dolor sed nisi elementum luctus?
+
+        .col-xs-4.col-sm-2
+          = link_to "2 comments", "#"
+
+        .col-xs-2.col-sm-1
+          span.callout-text
+            ' 3.16
+          span.small-text
+            ' (10)
+
+        .graphs.col-xs-10.col-sm-4.text-align-right
+          .row
+            .col-xs-5.col-sm-6
+              span.small-text Strongly agree
+            .col-xs-6.col-sm-5
+              span.small-text
+                ' 10%
+              .graph-bar
+                span style="width: 10%"
+            .col-xs-1.col-sm-1
+              span.small-text
+                ' (1)
+
+          .row
+            .col-xs-5.col-sm-6
+              span.small-text Agree
+            .col-xs-6.col-sm-5
+              span.small-text
+                ' 30%
+              .graph-bar
+                span style="width: 30%"
+            .col-xs-1.col-sm-1
+              span.small-text
+                ' (3)
+
+          .row
+            .col-xs-5.col-sm-6
+              span.small-text Neutral
+            .col-xs-6.col-sm-5
+              span.small-text
+                ' 40%
+              .graph-bar
+                span style="width: 40%"
+            .col-xs-1.col-sm-1
+              span.small-text
+                ' (4)
+
+          .row
+            .col-xs-5.col-sm-6
+              span.small-text Disagree
+            .col-xs-6.col-sm-5
+              span.small-text
+                ' 20%
+              .graph-bar
+                span style="width: 20%"
+            .col-xs-1.col-sm-1
+              span.small-text
+                ' (2)
+
+          .row
+            .col-xs-5.col-sm-6
+              span.small-text Strongly disagree
+            .col-xs-6.col-sm-5
+              span.small-text
+                ' 0%
+              .graph-bar
+                span style="width: 0%"
+            .col-xs-1.col-sm-1
+              span.small-text
+                ' (0)

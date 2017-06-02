@@ -1,0 +1,205 @@
+.nav.nav--global.nav--mobile
+  .container
+    .row.middle-xs
+      .col-xs-2
+        = link_to "#", class: "menu-trigger" do
+          i.icon.icon-menu Menu
+
+      .col-xs-10
+        = link_to "/", class: "logo" do
+          = image_tag "logo/logo-large.png"
+
+    .menu-links
+      = link_to "Team", "#", class: "active"
+      = link_to "Campaigns", "#"
+      = link_to "Kudos", "#"
+      = link_to "Account", "#"
+      = link_to "Link", "#"
+      = link_to "Log out", "#"
+
+.nav.nav--global
+  .container
+    .row.between-xs.middle-xs
+      .col-xs-3
+        = link_to "/", class: "logo" do
+          = image_tag "logo/logo-large.png"
+
+      .col-xs-9
+        .row.middle-xs.end-xs
+          .nav-links.col-xs-6.col-sm-9
+            = link_to "Team", "#", class: "active"
+            = link_to "Campaigns", "#"
+            = link_to "Kudos", "#"
+
+          .dropdown.col-xs-5.col-sm
+            = link_to "#", class: "button button-link dropdown-trigger" do
+              .avatar.avatar--small
+                span DS
+
+              ' Username
+              i.icon.icon-down-arrow Icon
+
+            .dropdown-menu
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+
+.container
+  .card.card--large
+    h3.tertiary-headline Feedback Survey
+    p Please evaluate the following statements about [company].
+
+    .well.well--large
+      .row.between-sm.middle-sm
+        .col-xs-12.col-sm-5
+          p.callout-text
+            ' [Company] helps create open lines of communication between myself and my manager.
+
+        .col-xs-12.col-sm-6
+          .row.between-xs.center-xs
+            .col-xs.text-align-left
+              span.small-text Strongly disagree
+            .col-xs
+              span.small-text Neutral
+            .col-xs.text-align-right
+              span.small-text Strongly agree
+
+          .grouped-options
+            .input-wrapper
+              .option
+                input#option-1 type="radio" name="option[1]"
+                label for="option-1" 1
+
+              .option
+                input#option-2 type="radio" name="option[1]"
+                label for="option-2" 2
+
+              .option
+                input#option-3 type="radio" name="option[1]"
+                label for="option-3" 3
+
+              .option
+                input#option-4 type="radio" name="option[1]" checked="checked"
+                label for="option-4" 4
+
+              .option
+                input#option-5 type="radio" name="option[1]"
+                label for="option-5" 5
+
+      hr
+
+      .row.between-sm.middle-sm
+        .col-xs-12.col-sm-5
+          p.callout-text Phasellus turpis ex, aliquet ut justo at, sodales malesuada dolor.
+
+        .col-xs-12.col-sm-6
+          .row.between-xs.center-xs
+            .col-xs.text-align-left
+              span.small-text Strongly disagree
+            .col-xs
+              span.small-text Neutral
+            .col-xs.text-align-right
+              span.small-text Strongly agree
+
+          .grouped-options
+            .input-wrapper
+              .option
+                input type="radio" name="option[2]"
+                label for="option-1" 1
+
+              .option
+                input type="radio" name="option[2]"
+                label for="option-2" 2
+
+              .option
+                input type="radio" name="option[2]"
+                label for="option-3" 3
+
+              .option
+                input type="radio" name="option[2]"
+                label for="option-4" 4
+
+              .option
+                input type="radio" name="option[2]"
+                label for="option-5" 5
+
+      hr
+
+      .row.between-sm.middle-sm
+        .col-xs-12.col-sm-5
+          p.callout-text Phasellus cursus venenatis tellus, id ullamcorper tortor placerat at.
+
+        .col-xs-12.col-sm-6
+          .row.between-xs.center-xs
+            .col-xs.text-align-left
+              span.small-text Strongly disagree
+            .col-xs
+              span.small-text Neutral
+            .col-xs.text-align-right
+              span.small-text Strongly agree
+
+          .grouped-options
+            .input-wrapper
+              .option
+                input type="radio" name="option[3]"
+                label for="option-1" 1
+
+              .option
+                input type="radio" name="option[3]"
+                label for="option-2" 2
+
+              .option
+                input type="radio" name="option[3]"
+                label for="option-3" 3
+
+              .option
+                input type="radio" name="option[3]"
+                label for="option-4" 4
+
+              .option
+                input type="radio" name="option[3]"
+                label for="option-5" 5
+
+      hr
+
+      .row.between-sm.middle-sm
+        .col-xs-12.col-sm-5
+          p.callout-text In vulputate enim in volutpat dignissim.
+
+        .col-xs-12.col-sm-6
+          .row.between-xs.center-xs
+            .col-xs.text-align-left
+              span.small-text Strongly disagree
+            .col-xs
+              span.small-text Neutral
+            .col-xs.text-align-right
+              span.small-text Strongly agree
+
+          .grouped-options
+            .input-wrapper
+              .option
+                input type="radio" name="option[4]"
+                label for="option-1" 1
+
+              .option
+                input type="radio" name="option[4]"
+                label for="option-2" 2
+
+              .option
+                input type="radio" name="option[4]"
+                label for="option-3" 3
+
+              .option
+                input type="radio" name="option[4]"
+                label for="option-4" 4
+
+              .option
+                input type="radio" name="option[4]"
+                label for="option-5" 5
+
+    .row.center-xs.end-sm
+      .col-xs-12.col-sm
+        .form-group
+          input.button type="submit" value="Complete Feedback"

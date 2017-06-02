@@ -51,4 +51,23 @@
       line-height: 5rem;
     }
   }
+
+  // New
+  &--neutral {
+    background: rgba($highlight-color, 0.1) image-url("icon/icon-neutral.svg") center no-repeat;
+    background-size: 50% auto;
+    box-shadow: 0 0 0 2px $highlight-color;
+  }
+
+  &--positive {
+    background: rgba($success-color, 0.1) image-url("icon/icon-positive.svg") center no-repeat;
+    background-size: 50% auto;
+    box-shadow: 0 0 0 2px $success-color;
+  }
+
+  &--negative {
+    background: rgba($error-color, 0.1) image-url("icon/icon-negative.svg") center no-repeat;
+    background-size: 50% auto;
+    box-shadow: 0 0 0 2px $error-color;
+  }
 }

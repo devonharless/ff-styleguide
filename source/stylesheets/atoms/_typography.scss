@@ -58,6 +58,12 @@ hr {
   border-top: 0;
   margin: $base-spacing 0;
 
+  // New
+  &.hr--small {
+    margin: $small-spacing 0;
+  }
+
+
   &.hr--medium {
     margin: $large-spacing 0;
   }
@@ -126,4 +132,9 @@ hr {
 
 .text-align-right {
   text-align: right;
+}
+
+// New
+.text-align-left {
+  text-align: left;
 }

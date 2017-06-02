@@ -1,0 +1,31 @@
+.graph-bar {
+  border: 1px solid $dark-gray;
+  clear: both;
+  display: inline-block;
+  height: 8px;
+  width: 75%;
+  position: relative;
+
+  span {
+    @include position(absolute, 0px null null 0px);
+    height: 100%;
+  }
+}
+
+.graphs .row {
+  &:nth-child(1) .graph-bar span {
+    background: $success-color;
+  }
+  &:nth-child(2) .graph-bar span {
+    background: $action-color;
+  }
+  &:nth-child(3) .graph-bar span {
+    background: $medium-gray;
+  }
+  &:nth-child(4) .graph-bar span {
+    background: $warning-color;
+  }
+  &:nth-child(5) .graph-bar span {
+    background: $error-color;
+  }
+}

@@ -63,6 +63,12 @@ body {
     display: inline-block;
     margin: 0 $small-spacing;
   }
+
+  // New
+  &--mini {
+    display: inline-block;
+    margin: 0 $small-spacing / 2;
+  }
 }
 
 footer {
@@ -79,4 +85,9 @@ footer {
   @include media($mobile) {
     float: none;
   }
+}
+
+// New, hide on mobile
+.hidden-xs {
+  display: none;
 }

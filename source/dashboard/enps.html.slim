@@ -1,0 +1,150 @@
+.nav.nav--global.nav--mobile
+  .container
+    .row.middle-xs
+      .col-xs-2
+        = link_to "#", class: "menu-trigger" do
+          i.icon.icon-menu Menu
+
+      .col-xs-10
+        = link_to "/", class: "logo" do
+          = image_tag "logo/logo-large.png"
+
+    .menu-links
+      = link_to "Team", "#", class: "active"
+      = link_to "Campaigns", "#"
+      = link_to "Kudos", "#"
+      = link_to "Account", "#"
+      = link_to "Link", "#"
+      = link_to "Log out", "#"
+
+.nav.nav--global
+  .container
+    .row.between-xs.middle-xs
+      .col-xs-3
+        = link_to "/", class: "logo" do
+          = image_tag "logo/logo-large.png"
+
+      .col-xs-9
+        .row.middle-xs.end-xs
+          .nav-links.col-xs-6.col-sm-9
+            = link_to "Team", "#", class: "active"
+            = link_to "Campaigns", "#"
+            = link_to "Kudos", "#"
+
+          .dropdown.col-xs-5.col-sm
+            = link_to "#", class: "button button-link dropdown-trigger" do
+              .avatar.avatar--small
+                span DS
+
+              ' Username
+              i.icon.icon-down-arrow Icon
+
+            .dropdown-menu
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+
+.container
+  .nav.nav--secondary
+    .row.between-sm.middle-sm
+      .col-xs-12.col-sm-9
+        h1.secondary-headline NPS
+      .col-xs-12.col-sm-3
+        select
+          option Company Results
+          option Team A Results
+          option Team B Results
+          option Team C Results
+
+  .card.card--large
+    h3.tertiary-headline Company Results
+
+    .row.between-xs
+      .col-xs-12.col-sm-3
+        .well.well--small.well--success
+          .row
+            .col-xs-6
+              span.label-text NPS Score
+              p.secondary-headline 70
+
+            .col-xs-6
+              span.label-text Responses
+              p.secondary-headline 130
+
+        .vertical-spacer--large
+
+        h3.label-text Filter Category
+        .vertical-spacer--small
+        = link_to "Filter link", "#", class: "button button--wide button--small button--outline"
+        .vertical-spacer--small
+        = link_to "Filter link", "#", class: "button button--wide button--small button--outline"
+        .vertical-spacer--small
+        = link_to "Filter link", "#", class: "button button--wide button--small button--outline"
+
+        hr
+
+        h3.label-text Filter Category
+        .vertical-spacer--small
+        = link_to "Filter link", "#", class: "button button--wide button--small button--outline"
+        .vertical-spacer--small
+        = link_to "Filter link", "#", class: "button button--wide button--small button--outline"
+        .vertical-spacer--small
+        = link_to "Filter link", "#", class: "button button--wide button--small button--outline"
+
+        .vertical-spacer
+
+      .col-xs-12.col-sm-8
+        .row.between-xs.middle-xs.center-xs
+          .col-xs-12.col-sm-2
+            .avatar.avatar--neutral
+
+          .col-xs-12.col-sm-10.text-align-left
+            .well.well--highlight
+              .row.between-xs
+                .col-xs-6
+                  p.callout-text Score: 5
+                .col-xs-6.text-align-right
+                  span.small-text 2 days ago
+              p Suspendisse sollicitudin viverra tincidunt. Suspendisse posuere massa leo, et mollis nunc accumsan vitae. Duis rhoncus ante in est condimentum tincidunt.
+
+        .row.between-xs.middle-xs.center-xs
+          .col-xs-12.col-sm-2
+            .avatar.avatar--positive
+
+          .col-xs-12.col-sm-10.text-align-left
+            .well.well--success
+              .row.between-xs
+                .col-xs-6
+                  p.callout-text Score: 8
+                .col-xs-6.text-align-right
+                  span.small-text 1 day ago
+              p Suspendisse sollicitudin viverra tincidunt. Suspendisse posuere massa leo, et mollis nunc accumsan vitae. Duis rhoncus ante in est condimentum tincidunt.
+
+        .row.between-xs.middle-xs.center-xs
+          .col-xs-12.col-sm-2
+            .avatar.avatar--positive
+
+          .col-xs-12.col-sm-10.text-align-left
+            .well.well--success
+              .row.between-xs
+                .col-xs-6
+                  p.callout-text Score: 9
+                .col-xs-6.text-align-right
+                  span.small-text 24 hours ago
+              p Suspendisse sollicitudin viverra tincidunt. Suspendisse posuere massa leo, et mollis nunc accumsan vitae. Duis rhoncus ante in est condimentum tincidunt.
+
+        .row.between-xs.middle-xs.center-xs
+          .col-xs-12.col-sm-2
+            .avatar.avatar--negative
+
+          .col-xs-12.col-sm-10.text-align-left
+            .well.well--error
+              .row.between-xs
+                .col-xs-6
+                  p.callout-text Score: 2
+                .col-xs-6.text-align-right
+                  span.small-text 2 days ago
+              p Suspendisse sollicitudin viverra tincidunt. Suspendisse posuere massa leo, et mollis nunc accumsan vitae. Duis rhoncus ante in est condimentum tincidunt.
+
