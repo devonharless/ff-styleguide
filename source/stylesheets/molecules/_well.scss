@@ -23,6 +23,11 @@
 
   &--large {
     padding: $large-spacing;
+
+    // New
+    @include media($mobile) {
+      padding: $base-spacing;
+    }
   }
 
   &--highlight {

@@ -63,7 +63,7 @@
 
     .row.between-xs
       .col-xs-12.col-sm-3
-        .well.well--small.well--success
+        .well.well--small
           .row
             .col-xs-6
               span.label-text NPS Score
@@ -73,8 +73,27 @@
               span.label-text Responses
               p.secondary-headline 130
 
-        .vertical-spacer--large
+      .col-xs-12.col-sm-8
+        .row
+          div.hidden-xs style="width: 80%"
+            .tooltip.tooltip--bottom data-tooltip="80% (363 promoters)"
+              .well.well--small.well--success.well--centered
+                .avatar.avatar--small.avatar--positive
 
+          div.hidden-xs style="width: 10%"
+            .tooltip.tooltip--bottom data-tooltip="10% (45 passives)"
+              .well.well--small.well--highlight.well--centered
+                .avatar.avatar--small.avatar--neutral
+
+          div.hidden-xs style="width: 10%"
+            .tooltip.tooltip--bottom data-tooltip="10% (45 passives)"
+              .well.well--small.well--error.well--centered
+                .avatar.avatar--small.avatar--negative
+
+    .vertical-spacer
+
+    .row.between-xs
+      .col-xs-12.col-sm-3
         h3.label-text Filter Category
         .vertical-spacer--small
         = link_to "Filter link", "#", class: "button button--wide button--small button--outline"

@@ -89,5 +89,7 @@ footer {
 
 // New, hide on mobile
 .hidden-xs {
-  display: none;
+  @include media($mobile) {
+    display: none;
+  }
 }
