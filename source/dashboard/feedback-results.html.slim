@@ -94,7 +94,8 @@
       .col-xs.text-align-right
         = link_to "Expand all", "#", class: "button button--small button--outline button--highlight"
 
-    ul.list-group
+    // New, lines 98 - 253
+    ul.list-group.list-group--padded
       li
         = link_to "#", class: "row between-xs middle-xs" do
           .col-xs-12.col-sm
@@ -136,7 +137,7 @@
           .col-xs-6.col-sm.text-align-right
             span.small-text Expand
 
-      li
+      li.expanded
         = link_to "#", class: "row between-xs middle-xs" do
           .col-xs-12.col-sm
             .avatar.avatar--small
@@ -150,7 +151,7 @@
           .col-xs-6.col-sm.text-align-right
             span.small-text Collapse
 
-        .row
+        .row.middle-sm
           .col-xs-12.col-sm-7
             .vertical-spacer
             ul.list-group
@@ -191,10 +192,25 @@
                     i.icon.icon-star.icon--disabled.icon--medium Star
 
           .col-xs-12.col-sm-4.col-sm-offset-1
-            .well.well--success
+            p.callout-text Add a comment
+            textarea rows="4"
+            = link_to "Add Comment", "#", class: "button"
+
+            .vertical-spacer
+
+            hr
+
+            p.callout-text Comments:
+
+            p Etiam scelerisque, ex eu commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus
+
+        .well.well--success
+          .row.between-sm
+            .col-xs-12.col-sm-6
               span.label-text Suggestion
               p Commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus
 
+            .col-xs-12.col-sm-6
               span.label-text Impact
               p Etiam scelerisque, ex eu commodo faucibus, risus ipsum rhoncus quam, a pharetra velit eros ac lectus
 

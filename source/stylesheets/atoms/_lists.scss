@@ -23,9 +23,36 @@ dd {
     border-bottom: $base-border;
     padding: $small-spacing 0;
 
-
     &:last-child {
       border-bottom: none;
+    }
+  }
+
+  // New, 31 - 57
+  &--padded > li {
+    border: $base-border;
+    border-radius: $base-border-radius;
+    margin-top: $small-spacing;
+    padding: 0;
+    overflow: hidden;
+
+    > a {
+      background: $body-background;
+      padding: $small-spacing $base-spacing;
+    }
+
+    > div {
+      margin-left: $base-spacing;
+      margin-right: $base-spacing;
+    }
+
+    &.expanded > a {
+      border-bottom: $base-border;
+      box-shadow: 0 0 0 1px rgba(63,63,68,.05);
+    }
+
+    &:last-child {
+      border-bottom: $base-border;
     }
   }
 
