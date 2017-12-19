@@ -1,0 +1,73 @@
+.nav.nav--global.nav--mobile
+  .container
+    .row.middle-xs
+      .col-xs-2
+        = link_to "#", class: "menu-trigger" do
+          i.icon.icon-menu Menu
+
+      .col-xs-10
+        = link_to "/", class: "logo" do
+          = image_tag "logo/logo-large.png"
+
+    .menu-links
+      = link_to "Feed", "#"
+      = link_to "Recap", "#"
+
+.nav.nav--global
+  .container
+    .row.between-xs.middle-xs
+      .col-xs-3
+        = link_to "/", class: "logo" do
+          = image_tag "logo/logo-large.png"
+
+      .col-xs-9
+        .row.middle-xs.end-xs
+          .nav-links.col-xs
+            = link_to "Feed", "#"
+            = link_to "Recap", "#"
+
+.vertical-spacer
+
+.container
+  .row.center-xs
+    .col-xs-12.col-sm-6
+      .card.card--large
+        h1.primary-headline Recap Your Week
+
+        .vertical-spacer--large
+
+        form
+          .form-group
+            label How was your week?
+
+            .grouped-options.grouped-options--outline
+              .input-wrapper
+                .option
+                  input#option-1 type="radio" name="option[1]"
+                  label for="option-1" Terrible
+
+                .option
+                  input#option-2 type="radio" name="option[1]"
+                  label for="option-2" Not great
+
+                .option
+                  input#option-3 type="radio" name="option[1]"
+                  label for="option-3" Average
+
+                .option
+                  input#option-4 type="radio" name="option[1]"
+                  label for="option-4" Great
+
+                .option
+                  input#option-5 type="radio" name="option[1]"
+                  label for="option-5" Amazing
+
+            .vertical-spacer--large
+
+            textarea.input--light rows="5" placeholder="What do you want to remember about your week?"
+
+            input.input--light placeholder="Add a priority for the week..."
+
+            .vertical-spacer--large
+
+          input.button.button--large.button--wide type="submit" value="Submit Recap"
