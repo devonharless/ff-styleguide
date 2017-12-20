@@ -19,7 +19,7 @@
     border-radius: $base-border-radius;
     line-height: 1.125;
     opacity: 0;
-    padding: $base-spacing 0;
+    padding: $small-spacing 0;
     transition: all 0.2s cubic-bezier(1,0,0,1);
     transform: translateX(-50%);
     min-width: 150px;
@@ -34,8 +34,8 @@
     a {
       font-family: $medium-font-family;
       font-weight: 500;
-      line-height: 2.5;
-      padding: 0 $base-spacing;
+      line-height: 1.2;
+      padding: $small-spacing $base-spacing;
       text-align: left;
 
       &:hover {

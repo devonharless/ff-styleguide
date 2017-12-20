@@ -25,7 +25,17 @@
       .col-xs-9
         .row.middle-xs.end-xs
           .nav-links.col-xs
-            = link_to "Product", "#"
+            .dropdown
+              = link_to "#", class: "dropdown-trigger" do
+                ' Dropdown link trigger
+
+              .dropdown-menu
+                = link_to "dropdown link", "#"
+                = link_to "dropdown link", "#"
+                = link_to "dropdown link", "#"
+                = link_to "dropdown link", "#"
+                = link_to "dropdown link", "#"
+
             = link_to "Customers", "#"
             = link_to "Request Demo", "#"
           .col-xs-2
