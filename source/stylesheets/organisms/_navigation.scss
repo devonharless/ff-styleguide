@@ -119,6 +119,11 @@
     .button,
     .dropdown-trigger {
       color: $white;
+      padding-bottom: $small-spacing / 2;
+    }
+
+    .dropdown-trigger {
+      margin-left: 0;
     }
 
     .button:hover {
@@ -133,15 +138,6 @@
       &:hover {
         box-shadow: 0 3px 0 0 darken($action-color, 20);
       }
-    }
-
-    .dropdown-menu {
-      top: $base-spacing;
-    }
-
-    .dropdown:hover .dropdown-menu {
-      z-index: 2;
-      opacity: 1;
     }
   }
 }
