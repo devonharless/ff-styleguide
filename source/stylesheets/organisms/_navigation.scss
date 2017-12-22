@@ -61,7 +61,7 @@
       margin: 0 $small-spacing 0 0;
     }
 
-    .nav-links a,
+    .nav-links>a,
     .dropdown-trigger {
       color: desaturate(lighten($dark-gray, 15), 25);
       font-size: $base-font-size;
@@ -73,7 +73,7 @@
       white-space: nowrap;
     }
 
-    a.active {
+    & > a.active {
       color: $action-color;
       font-weight: 600;
     }
@@ -115,9 +115,15 @@
     width: 100%;
     left: 0px;
 
-    .nav-links a,
-    .button {
+    .nav-links>a,
+    .button,
+    .dropdown-trigger {
       color: $white;
+      padding-bottom: $small-spacing / 2;
+    }
+
+    .dropdown-trigger {
+      margin-left: 0;
     }
 
     .button:hover {
@@ -126,7 +132,7 @@
       }
     }
 
-    .nav-links a {
+    .nav-links>a {
       transition: all 0.2s linear;
 
       &:hover {
