@@ -123,11 +123,17 @@ hr {
   font-weight: bold;
 }
 
-.callout-block-text {
+.callout-block-text,
+.callout-quote-text {
   color: darken(desaturate($sky-blue, 40), 5);
   font-size: 1.125rem;
   line-height: 1.5;
   margin-bottom: $base-spacing;
+}
+
+.callout-quote-text {
+  font-family: $serif-font-family;
+  font-weight: 300;
 }
 
 .text-align-right {

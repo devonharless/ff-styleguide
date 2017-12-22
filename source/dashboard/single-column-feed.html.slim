@@ -1,0 +1,105 @@
+.nav.nav--global.nav--mobile
+  .container
+    .row.middle-xs
+      .col-xs-2
+        = link_to "#", class: "menu-trigger" do
+          i.icon.icon-menu Menu
+
+      .col-xs-10
+        = link_to "/", class: "logo" do
+          = image_tag "logo/logo-large.png"
+
+    .menu-links
+      = link_to "Feed", "#", class: "active"
+      = link_to "Recap", "#"
+
+.nav.nav--global
+  .container
+    .row.between-xs.middle-xs
+      .col-xs-3
+        = link_to "/", class: "logo" do
+          = image_tag "logo/logo-large.png"
+
+      .col-xs-9
+        .row.middle-xs.end-xs
+          .nav-links.col-xs
+            = link_to "Feed", "#", class: "active"
+            = link_to "Recap", "#"
+
+.vertical-spacer
+
+.container
+  .row.center-xs
+    .col-xs-12.col-sm-6
+      h1.primary-headline Recaps
+
+      .card.card--large
+        .col-xs-12
+          .row.between-xs
+            h2.secondary-headline 12/19/2017
+            span.badge Great
+
+
+        .row
+          .col-xs-12
+            hr.hr--small
+
+        .vertical-spacer
+
+        p.callout-quote-text Duis sed ex ac risus aliquet faucibus eget a quam. Nam sit amet pellentesque erat. Nulla finibus eget ante ut rhoncus. Proin in est ut sem auctor convallis. Integer iaculis velit eu augue tincidunt sollicitudin. Donec tristique hendrerit purus, sit amet tempor libero semper vitae. Sed non ultricies tellus.
+
+        span.label-text Next week priorities
+
+        ul.list-group
+          li This is a priority
+          li Another priority
+          li And another
+
+
+      .card.card--large
+        .col-xs-12
+          .row.between-xs
+            h2.secondary-headline 12/10/2017
+            span.badge.badge--warning Average
+
+
+        .row
+          .col-xs-12
+            hr.hr--small
+
+        .vertical-spacer
+
+        p.callout-quote-text Duis sed ex ac risus aliquet faucibus eget a quam. Nam sit amet pellentesque erat. Nulla finibus eget ante ut rhoncus. Proin in est ut sem auctor convallis.
+        p.callout-quote-text Integer iaculis velit eu augue tincidunt sollicitudin. Donec tristique hendrerit purus, sit amet tempor libero semper vitae. Sed non ultricies tellus.
+
+        span.label-text Next week priorities
+
+        ul.list-group
+          li This is a priority
+          li Another priority
+
+
+      .card.card--large
+        .col-xs-12
+          .row.between-xs
+            h2.secondary-headline 11/29/2017
+            span.badge.badge--error Terrible
+
+
+        .row
+          .col-xs-12
+            hr.hr--small
+
+        .vertical-spacer
+
+        p.callout-quote-text Duis sed ex ac risus aliquet faucibus eget a quam. Nam sit amet pellentesque erat. Nulla finibus eget ante ut rhoncus. Proin in est ut sem auctor convallis.
+        p.callout-quote-text Integer iaculis velit eu augue tincidunt sollicitudin. Donec tristique hendrerit purus, sit amet tempor libero semper vitae. Sed non ultricies tellus.
+
+        span.label-text Next week priorities
+
+        ul.list-group
+          li This is a priority
+          li Another priority
+          li Oh look, we have another priority
+          li Definitely another priority that we should do next week
+
