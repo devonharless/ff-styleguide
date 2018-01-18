@@ -1,7 +1,5 @@
 require 'slim'
 
-set :site_url, ""
-
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
@@ -45,13 +43,14 @@ page '/dashboard/*', layout: 'dashboard-layout'
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
+set :relative_links, true
 
 configure :build do
   activate :minify_css
   activate :minify_javascript
 
+  set :http_prefix, '/ff-styleguide'
+
   # Append a hash to asset urls (make sure to use the url helpers)
   activate :asset_hash
-
-  set :site_url, "/ff-styleguide"
 end
