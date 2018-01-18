@@ -43,7 +43,6 @@ page '/dashboard/*', layout: 'dashboard-layout'
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
-set :relative_links, true
 
 configure :build do
   activate :minify_css
