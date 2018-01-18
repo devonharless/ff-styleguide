@@ -1,0 +1,25 @@
+<!DOCTYPE html><html><head><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><meta charset="utf-8" /><meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" /><title>Friday Feedback Styleguide</title><link href="https://fonts.googleapis.com/css?family=Merriweather:300" rel="stylesheet" /><link href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" rel="stylesheet" type="text/css" /><script src="https://use.typekit.net/yvd5vdt.js"></script><script>try{Typekit.load({ async: true });}catch(e){}</script><link href="/stylesheets/site.css" rel="stylesheet" /><script src="/javascripts/jquery.js"></script></head><body class="dashboard dashboard_single-column-feed"><div class="nav nav--global nav--mobile"><div class="container"><div class="row middle-xs"><div class="col-xs-2"><a href="#" class="menu-trigger"><i class="icon icon-menu">Menu</i></a></div><div class="col-xs-10"><a href="/" class="logo"><img src="/images/logo/logo-large.png" alt="Logo large" /></a></div></div><div class="menu-links"><a href="#" class="active">Feed</a><a href="#">Recap</a></div></div></div><div class="nav nav--global"><div class="container"><div class="row between-xs middle-xs"><div class="col-xs-3"><a href="/" class="logo"><img src="/images/logo/logo-large.png" alt="Logo large" /></a></div><div class="col-xs-9"><div class="row middle-xs end-xs"><div class="nav-links col-xs"><a href="#" class="active">Feed</a><a href="#">Recap</a></div></div></div></div></div></div><div class="vertical-spacer"></div><div class="container"><div class="row center-xs"><div class="col-xs-12 col-sm-6"><h1 class="primary-headline">Recaps</h1><div class="card card--large"><div class="col-xs-12"><div class="row between-xs"><h2 class="secondary-headline">12/19/2017</h2><span class="badge">Great</span></div></div><div class="row"><div class="col-xs-12"><hr class="hr--small" /></div></div><div class="vertical-spacer"></div><p class="callout-quote-text">Duis sed ex ac risus aliquet faucibus eget a quam. Nam sit amet pellentesque erat. Nulla finibus eget ante ut rhoncus. Proin in est ut sem auctor convallis. Integer iaculis velit eu augue tincidunt sollicitudin. Donec tristique hendrerit purus, sit amet tempor libero semper vitae. Sed non ultricies tellus.</p><span class="label-text">Next week priorities</span><ul class="list-group"><li>This is a priority</li><li>Another priority</li><li>And another</li></ul></div><div class="card card--large"><div class="col-xs-12"><div class="row between-xs"><h2 class="secondary-headline">12/10/2017</h2><span class="badge badge--warning">Average</span></div></div><div class="row"><div class="col-xs-12"><hr class="hr--small" /></div></div><div class="vertical-spacer"></div><p class="callout-quote-text">Duis sed ex ac risus aliquet faucibus eget a quam. Nam sit amet pellentesque erat. Nulla finibus eget ante ut rhoncus. Proin in est ut sem auctor convallis.</p><p class="callout-quote-text">Integer iaculis velit eu augue tincidunt sollicitudin. Donec tristique hendrerit purus, sit amet tempor libero semper vitae. Sed non ultricies tellus.</p><span class="label-text">Next week priorities</span><ul class="list-group"><li>This is a priority</li><li>Another priority</li></ul></div><div class="card card--large"><div class="col-xs-12"><div class="row between-xs"><h2 class="secondary-headline">11/29/2017</h2><span class="badge badge--error">Terrible</span></div></div><div class="row"><div class="col-xs-12"><hr class="hr--small" /></div></div><div class="vertical-spacer"></div><p class="callout-quote-text">Duis sed ex ac risus aliquet faucibus eget a quam. Nam sit amet pellentesque erat. Nulla finibus eget ante ut rhoncus. Proin in est ut sem auctor convallis.</p><p class="callout-quote-text">Integer iaculis velit eu augue tincidunt sollicitudin. Donec tristique hendrerit purus, sit amet tempor libero semper vitae. Sed non ultricies tellus.</p><span class="label-text">Next week priorities</span><ul class="list-group"><li>This is a priority</li><li>Another priority</li><li>Oh look, we have another priority</li><li>Definitely another priority that we should do next week</li></ul></div></div></div></div></body><script>var $window = $(window);
+
+$(document).ready(function() {
+  $(".dropdown-trigger").on("click", toggleDropdown);
+  $(".menu-trigger").on("click", toggleMobileNavigation);
+});
+
+function toggleMobileNavigation(e) {
+  e.preventDefault();
+
+  $(".menu-links").slideToggle();
+}
+
+function toggleDropdown(e) {
+  e.preventDefault();
+  e.stopPropagation();
+
+  $(this).next(".dropdown-menu").toggleClass("active");
+}
+
+function hideDropdown(e) {
+  $(".dropdown-menu").removeClass("active");
+}
+
+$window.on("click", hideDropdown);</script></html>
