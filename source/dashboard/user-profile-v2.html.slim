@@ -1,0 +1,399 @@
+.nav.nav--global.nav--mobile
+  .container
+    .row.middle-xs
+      .col-xs-2
+        = link_to "#", class: "menu-trigger" do
+          i.icon.icon-menu Menu
+
+      .col-xs-10
+        = link_to "/", class: "logo" do
+          = image_tag "logo/logo-large.png"
+
+    .menu-links
+      = link_to "Team", "#", class: "active"
+      = link_to "Campaigns", "#"
+      = link_to "Kudos", "#"
+      = link_to "Account", "#"
+      = link_to "Link", "#"
+      = link_to "Log out", "#"
+
+.nav.nav--global
+  .container
+    .row.between-xs.middle-xs
+      .col-xs-3
+        = link_to "/", class: "logo" do
+          = image_tag "logo/logo-large.png"
+
+      .col-xs-9
+        .row.middle-xs.end-xs
+          .nav-links.col-xs-6.col-sm-9
+            = link_to "Team", "#", class: "active"
+            = link_to "Campaigns", "#"
+            = link_to "Kudos", "#"
+
+          .dropdown.col-xs-5.col-sm
+            = link_to "#", class: "button button-link dropdown-trigger" do
+              .avatar.avatar--small
+                span DS
+
+              ' Username
+              i.icon.icon-down-arrow Icon
+
+            .dropdown-menu
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+              = link_to "dropdown link", "#"
+
+.hero
+  .container
+    .vertical-spacer &nbsp;
+
+    .row.between-xs
+      .col-xs-12.col-sm-4.col-md-3
+        h2.xlarge-headline
+          | Welcome back,
+          br James Smith
+
+        .vertical-spacer--small &nbsp;
+
+        ul.list-group.hidden-xs
+          li
+            span You have 2 tasks to complete
+          li
+            span
+              i.icon.icon-star.icon--white
+              | &nbsp;7 week streak completing assessments!
+
+      .col-xs-12.col-sm-8
+        h3.secondary-headline 2 tasks to complete
+
+        .card.card--small
+          .row.middle-xs.between-xs
+            .col-xs-12.col-sm-8.col-md-8
+              h4.callout-text Review this person, this week. Do it now!
+              span.badge.badge--outline Active
+              .horizontal-spacer--mini
+              span Weekly review cycle
+
+            .col-xs-12.col-sm-4
+              .row.middle-xs.end-xs
+                .col-xs-1.col-sm
+                  = link_to "Dismiss", "#", class: "small-text text-align-right"
+                .col-xs
+                  = link_to "Review peer", "#", class: "button button--small button--highlight"
+
+        .card.card--small
+          .row.middle-xs.between-xs
+            .col-xs-12.col-sm-8
+              h4.callout-text Update your quarterly goal
+              span Career development, team leadership
+
+            .col-xs-12.col-sm-4
+              .row.middle-xs.end-xs
+                .col-xs-1.col-sm
+                  = link_to "Dismiss", "#", class: "small-text text-align-right"
+                .col-xs
+                  = link_to "Update goal", "#", class: "button button--small button--highlight"
+
+    .vertical-spacer &nbsp;
+
+.container
+  .vertical-spacer--small &nbsp;
+
+  .row.between-sm
+    .col-xs-12.col-sm-3
+      .row.center-xs.start-sm
+        .col-xs-12
+          .avatar.avatar--xlarge
+            = image_tag "http://loremflickr.com/200/200/corgi"
+
+          hr.hr--small
+
+          span.label-text Department
+          p Marketing
+
+          span.label-text Email
+          p jamessmith@company.com
+
+          span.label-text Birthday
+          p Sept 30
+
+          hr.hr--small
+          = link_to "Update profile", "#", class: "button button--small button--outline"
+
+          .vertical-spacer--large
+
+      .row.hidden-xs
+        .col-xs-12
+          .well
+            h4.label-text Manager
+            .vertical-spacer--mini &nbsp;
+
+            = link_to "#" do
+              .row.middle-xs.between-sm
+                .col-xs-2
+                  .avatar.avatar--small
+                      span JH
+
+                .col-xs-9
+                  p
+                    span Jim Halpert
+                    br
+                    span.deemphasized-text Marketing Director
+
+            hr
+
+            h4.label-text Peers (2)
+
+            .vertical-spacer--mini &nbsp;
+
+            = link_to "#" do
+              .row.middle-xs.between-sm
+                .col-xs-2
+                  .avatar.avatar--small
+                      span DB
+
+                .col-xs-9
+                  p
+                    span Danesh Bodhi
+                    br
+                    span.deemphasized-text Sr. Marketing Rep
+
+            hr.hr--small
+
+            = link_to "#" do
+              .row.middle-xs.between-sm
+                .col-xs-2
+                  .avatar.avatar--small
+                      span PW
+
+                .col-xs-9
+                  p
+                    span Penelope Walters
+                    br
+                    span.deemphasized-text Sr. Marketing Rep
+
+    .col-xs-12.col-sm-8
+      .card.card-callout
+        .card-callout-image
+          = image_tag "http://loremflickr.com/400/400/mountain"
+
+        .card-callout-content
+          .row
+            .col-xs-12.col-sm-10
+              p.tertiary-headline James Smith is on the marketing team, where he wrangles engagement funnels and quarterly product announcements.
+
+              p James' career kicked off with helping clients all over the globe. He helped create and manage various multi-national campaigns.
+
+              p In his spare time, James enjoys rock climbings in remote places, crafting his own brews, and skiing in some fresh powder.
+
+      .card.card-callout
+        .card-header
+          .row.middle-xs
+            .col-xs
+              h2.secondary-headline.card-headline Your responses
+            .toggle
+              input#toggle-2.toggle-cb type="checkbox" name="toggle" checked="checked"
+              label.toggle-label for="toggle-2"
+                .toggle-inner data-active="Week" data-inactive="Month"
+                .toggle-switch
+
+        .card-callout-content
+          = image_tag "placeholder-chart.png"
+
+      .card.card-callout
+        .card-header
+          .row.middle-xs
+            .col-xs
+              h2.secondary-headline.card-headline Goals
+
+            = link_to "Create a goal", "#", class: "button button--highlight button--outline"
+
+        .card-callout-content
+          h4.tertiary-headline You currently have no goals.
+          span
+            ' Dont be shy, go ahead and
+            = link_to "create a goal!", "#"
+
+      .card.card-callout
+        .card-header
+          .row.middle-xs
+            .col-xs
+              h2.secondary-headline.card-headline Check-ins
+
+            = link_to "New check-in", "#", class: "button button--highlight button--outline"
+
+        ul.list-group.list-group--minimal
+          li
+            = link_to "#" do
+              .row.middle-xs.between-xs
+                .col-xs-8.col-sm-10
+                  span.tertiary-headline March 2, 2018 check-in
+
+                .col-xs-4.col-sm-2.text-align-right
+                  span.small-text Expand
+
+          li
+            = link_to "#" do
+              .row.middle-xs.between-xs
+                .col-xs-8.col-sm-10
+                  span.tertiary-headline March 10, 2018 check-in
+
+                .col-xs-4.col-sm-2.text-align-right
+                  span.small-text Expand
+
+          li.expanded
+            = link_to "#" do
+              .row.middle-xs.between-xs
+                .col-xs-8.col-sm-10
+                  span.tertiary-headline March 16, 2018 check-in
+
+                .col-xs-4.col-sm-2.text-align-right
+                  span.small-text Collapse
+
+            .card-callout-content
+              .row
+                .col-xs-12
+                  ul.list-group
+                    li
+                      .row.middle-xs
+                        .col-xs-11.col-sm-11
+                          .row
+                            .col-xs-11
+                              span.deemphasized-text How was your experience at work this week?
+                          .row
+                            .col-xs-11
+                              span.emphasized-text Average
+
+                        .col-xs-1.col-sm-1
+                          = link_to "#", class: "tooltip tooltip--left align-right", data: {"tooltip": "Favorites feedback and sends a thank you email to respondant."} do
+                            i.icon.icon-star.icon--disabled.icon--medium Star
+                    li
+                      .row.middle-xs
+                        .col-xs-11.col-sm-11
+                          .row
+                            .col-xs-11
+                              span.deemphasized-text What challenges did you face? Anything we can do to help?
+                          .row
+                            .col-xs-11
+                              span.emphasized-text None at all
+
+                        .col-xs-1.col-sm-1
+                          = link_to "#", class: "tooltip tooltip--left align-right", data: {"tooltip": "Favorites feedback and sends a thank you email to respondant."} do
+                            i.icon.icon-star.icon--disabled.icon--medium Star
+                    li
+                      .row.middle-xs
+                        .col-xs-11.col-sm-11
+                          .row
+                            .col-xs-11
+                              span.deemphasized-text If you were given the chance, would you reapply for your current position?
+                          .row
+                            .col-xs-11
+                              span.emphasized-text Yes
+
+                        .col-xs-1.col-sm-1
+                          = link_to "#", class: "tooltip tooltip--left align-right", data: {"tooltip": "Favorites feedback and sends a thank you email to respondant."} do
+                            i.icon.icon-star.icon--disabled.icon--medium Star
+                    li
+                      .row.middle-xs
+                        .col-xs-11.col-sm-11
+                          .row
+                            .col-xs-11
+                              span.deemphasized-text How frequently do you receive recognition from your manager?
+                          .row
+                            .col-xs-11
+                              span.emphasized-text Very often. I respond well to positive feedback, so I appreciate the effort.
+
+                        .col-xs-1.col-sm-1
+                          = link_to "#", class: "tooltip tooltip--left align-right", data: {"tooltip": "Favorites feedback and sends a thank you email to respondant."} do
+                            i.icon.icon-star.icon--disabled.icon--medium Star
+
+                .col-xs-12.col-sm-8
+                  .well.well--small.well--highlight
+                    h4.callout-text Manager McMangerFace
+                    span Thank you for your feedback! We're glad you had a wonderful week and we're so excited to have you on our team!
+
+          li
+            = link_to "#" do
+              .row.middle-xs.between-xs
+                .col-xs-8.col-sm-10
+                  span.tertiary-headline March 22, 2018 check-in
+
+                .col-xs-4.col-sm-2.text-align-right
+                  span.small-text Expand
+
+          li
+            = link_to "#" do
+              .row.middle-xs.between-xs
+                .col-xs-8.col-sm-10
+                  span.tertiary-headline March 30, 2018 check-in
+
+                .col-xs-4.col-sm-2.text-align-right
+                  span.small-text Expand
+
+      .card.card-callout
+        .card-header
+          .row.middle-xs
+            .col-xs
+              h2.secondary-headline.card-headline Reviews
+
+            = link_to "Review CTA", "#", class: "button button--highlight button--outline"
+
+        .card-callout-content
+          h4.tertiary-headline You currently have no reviews.
+          span You must be new! Don't despair, you'll have a quarterly review coming up!
+
+      .card.card-callout
+        .card-header
+          .row.middle-xs
+            .col-xs
+              h2.secondary-headline.card-headline Kudos
+
+            = link_to "Send a kudo", "#", class: "button button--highlight button--outline"
+
+        .card-callout-content
+          ul.list-group
+            li
+              .row.middle-xs.between-xs
+                .col-xs-2.col-sm-1
+                  .avatar.avatar--small
+                    span YR
+
+                .col-xs-10.col-sm-11
+                  span.callout-text Yonatan Russell
+                  .horizontal-spacer--mini
+                  span.small-text.text-align-right March 10, 2018
+                  br
+                  span You are a super awesome person to work with. I'm glad we were able to pair this week!
+
+            li
+              .row.middle-xs.between-xs
+                .col-xs-2.col-sm-1
+                  .avatar.avatar--small
+                    span WO
+
+                .col-xs-10.col-sm-11
+                  span.callout-text Wendy Omuda
+                  .horizontal-spacer--mini
+                  span.small-text.text-align-right March 9, 2018
+                  br
+                  span I was so impressed this week because you immediately jumped into the project and started helping! Keep it up!
+
+            li
+              .row.middle-xs.between-xs
+                .col-xs-2.col-sm-1
+                  .avatar.avatar--small
+                    span SB
+
+                .col-xs-10.col-sm-11
+                  span.callout-text Samantha Bartletti
+                  .horizontal-spacer--mini
+                  span.small-text.text-align-right March 9, 2018
+                  br
+                  span You're a great addition to our sales team! You asked great follow-up questions in our weekly meeting.
+
+      = link_to "Back to top", "#", class: "align-right"
+
+      .vertical-spacer--large &nbsp;

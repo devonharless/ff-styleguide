@@ -4,6 +4,7 @@
   box-shadow: 0 0 0 1px rgba(63,63,68,.05),
   0 1px 3px rgba(63,63,68,.1),
   0 1px 2px rgba(0,0,0,.05);
+  color: $base-font-color;
   text-align: left;
   margin: $base-spacing 0;
   padding: $base-spacing;
@@ -11,12 +12,50 @@
   &-callout {
     padding: 0;
 
+    &-image {
+      background: lighten($turquoise, 4) image-url("icon/icon-crown.svg") repeat;
+      background-size: 16px;
+      border-radius: $base-border-radius $base-border-radius 0 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      max-height: 200px;
+      min-height: 112px;
+      position: relative;
+      overflow: hidden;
+
+      &:before {
+        background: linear-gradient(transparent, rgba(#000000, 0.4));
+        color: $white;
+        content: "James Smith";
+        font-size: 1.75rem;
+        font-family: $thin-font-family;
+        font-weight: 200;
+        padding: $small-spacing $base-spacing;
+        position: absolute;
+        width: 100%;
+      }
+    }
+
     &-image img {
+      display: block;
+      height: 200px;
+      object-fit: cover;
       width: 100%;
     }
 
     &-content {
       padding: $base-spacing;
+    }
+  }
+
+  &-header {
+    border-bottom: 1px solid $base-border-color;
+    padding: $base-spacing / 1.5 $base-spacing;
+
+    .card-headline {
+      font-weight: 600;
+      margin-bottom: 0;
     }
   }
 

@@ -63,7 +63,6 @@ hr {
     margin: $small-spacing 0;
   }
 
-
   &.hr--medium {
     margin: $large-spacing 0;
   }
@@ -79,6 +78,10 @@ hr {
   font-weight: 200;
   margin-bottom: $small-spacing;
   letter-spacing: 0.06rem;
+
+  @include media($tablet) {
+    font-size: 1.875rem;
+  }
 }
 
 .primary-headline {
@@ -118,6 +121,10 @@ hr {
   font-style: italic;
 }
 
+.deemphasized-text {
+  color: lighten(desaturate($dark-gray, 10), 15);
+}
+
 .callout-text {
   font-size: 1rem;
   font-weight: bold;
@@ -140,7 +147,6 @@ hr {
   text-align: right;
 }
 
-// New
 .text-align-left {
   text-align: left;
 }

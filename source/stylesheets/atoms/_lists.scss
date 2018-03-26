@@ -28,6 +28,53 @@ dd {
     }
   }
 
+  &--minimal {
+    > li {
+      border-top: 1px solid $base-border-color;
+      border-bottom: none;
+      margin: 0 $base-spacing;
+      padding: 0;
+
+      &:first-child {
+        border-top: none;
+        margin-top: $small-spacing;
+      }
+
+      &:last-child {
+        margin-bottom: $small-spacing;
+      }
+    }
+
+    a {
+      display: block;
+      padding: $small-spacing 0;
+    }
+
+    .expanded {
+      border-top: 1px solid $base-border-color;
+      border-bottom: 1px solid $base-border-color;
+      padding: 0;
+      margin: 0;
+
+      a {
+        color: $base-font-color;
+        font-weight: bold;
+      }
+    }
+
+    .expanded > a {
+      padding: $small-spacing $base-spacing;
+    }
+
+    .expanded .card-callout-content {
+      background: rgba($body-background, 0.3);
+    }
+
+    .expanded + li {
+      border-top: none;
+    }
+  }
+
   // New, 31 - 57
   &--padded > li {
     border: $base-border;
