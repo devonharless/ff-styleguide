@@ -52,6 +52,20 @@
     }
   }
 
+  &--xlarge {
+    @include size(8rem);
+    font-size: 2rem;
+    margin-top: $base-spacing;
+
+    img {
+      @include size(8rem);
+    }
+
+    span {
+      line-height: 8rem;
+    }
+  }
+
   // New
   &--neutral {
     background: rgba($highlight-color, 0.1) image-url("icon/icon-neutral.svg") center no-repeat;
