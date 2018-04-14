@@ -28,6 +28,10 @@ dd {
     }
   }
 
+  &-header {
+    cursor: pointer;
+  }
+
   &--minimal {
     > li {
       border-top: 1px solid $base-border-color;
@@ -75,7 +79,6 @@ dd {
     }
   }
 
-  // New, 31 - 57
   &--padded > li {
     border: $base-border;
     border-radius: $base-border-radius;
@@ -83,7 +86,8 @@ dd {
     padding: 0;
     overflow: hidden;
 
-    > a {
+    > a, .list-group-header {
+      margin: 0;
       background: $body-background;
       padding: $small-spacing $base-spacing;
     }
