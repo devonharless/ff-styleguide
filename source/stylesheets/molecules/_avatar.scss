@@ -1,7 +1,11 @@
+@mixin avarar-box-shadow($color: $action-color) {
+  box-shadow: 0 0 0 2px $color;
+}
+
 .avatar {
   @include size(3.75rem);
+  @include avarar-box-shadow($action-color);
   border: 2px solid $white;
-  box-shadow: 0 0 0 2px $action-color;
   border-radius: 50%;
   box-sizing: content-box;
   display: inline-block;
@@ -10,9 +14,16 @@
   position: relative;
   text-align: center;
   vertical-align: middle;
+  background-size: cover;
+  position: relative;
 
   img {
-    @include size(3.75rem);
+    height: 100%;
+    width: auto;
+    max-width: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   span {
@@ -24,6 +35,10 @@
     text-transform: uppercase;
     height: 100%;
     width: 100%;
+
+    &.avatar--alt-color {
+      background: $turquoise;
+    }
   }
 
   &--small {
@@ -83,5 +98,12 @@
     background: rgba($error-color, 0.1) image-url("icon/icon-negative.svg") center no-repeat;
     background-size: 50% auto;
     box-shadow: 0 0 0 2px $error-color;
+  }
+
+  &--scrunched {
+    margin: -5px 0;
+    span {
+      background: $turquoise;
+    }
   }
 }

@@ -58,7 +58,6 @@ hr {
   border-top: 0;
   margin: $base-spacing 0;
 
-  // New
   &.hr--small {
     margin: $small-spacing 0;
   }
@@ -82,6 +81,38 @@ hr {
   @include media($tablet) {
     font-size: 1.875rem;
   }
+}
+
+.x3large-headline {
+  font-family: $thin-font-family;
+  font-size: 3.5rem;
+  font-weight: 200;
+  margin-bottom: $small-spacing;
+  letter-spacing: 0.06rem;
+}
+
+.xxlarge-headline {
+  font-family: $thin-font-family;
+  font-size: 4rem;
+  font-weight: 200;
+  margin-bottom: $small-spacing;
+  letter-spacing: 0.06rem;
+}
+
+.blog-paragraph--headline {
+  font-family: $thin-font-family;
+  font-size: 2rem;
+  margin-top: $medium-spacing;
+  margin-bottom: $small-spacing;
+  text-align: left;
+}
+
+.blog-paragraph--subheadline {
+  font-family: $thin-font-family;
+  font-size: 1.5rem;
+  margin-top: $medium-spacing;
+  margin-bottom: $small-spacing;
+  text-align: left;
 }
 
 .primary-headline {
