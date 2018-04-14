@@ -68,7 +68,6 @@ body {
     margin: 0 $small-spacing;
   }
 
-  // New
   &--mini {
     display: inline-block;
     margin: 0 $small-spacing / 2;
@@ -78,7 +77,7 @@ body {
 footer {
   background: $midnight;
   color: $action-color;
-  flex: 1;
+  flex-grow: 1;
   padding: $large-spacing 0;
   width: 100%;
 }
@@ -91,7 +90,14 @@ footer {
   }
 }
 
-// New, hide on mobile
+.align-left {
+  float: left;
+
+  @include media($mobile) {
+    float: none;
+  }
+}
+
 .hidden-xs {
   @include media($mobile) {
     display: none;
