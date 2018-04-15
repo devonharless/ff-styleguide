@@ -19,7 +19,9 @@ $heading-line-height: 1.2;
 // Other Sizes
 $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1rem;
+$tiny-spacing: $base-spacing / 2.5;
 $small-spacing: $base-spacing / 2;
+$medium-spacing: $base-spacing * 2;
 $large-spacing: $base-spacing * 2;
 $base-z-index: 0;
 
