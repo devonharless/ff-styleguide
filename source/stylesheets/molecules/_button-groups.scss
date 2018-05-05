@@ -4,9 +4,14 @@
     border: none;
     border-radius: $base-border-radius;
     display: flex;
+    display: -ms-flexbox;
     height: 40px;
     justify-content: center;
     white-space: nowrap;
+    @media(max-width: $medium-screen) {
+      height: auto;
+      flex-direction: column;
+    }
   }
 
   .option {
@@ -14,6 +19,8 @@
     background-color: rgba(desaturate($action-color, 20), 0.15);
     border-right: 1px solid rgba(desaturate($action-color, 20), 0.25);
     display: flex;
+    display: -ms-flexbox;
+    -ms-flex: 1;
     flex-direction: column;
     height: 100%;
     justify-content: center;
@@ -34,12 +41,20 @@
     &:hover {
       opacity: 1;
     }
+
+    @media(max-width: $medium-screen) {
+      height: 55px;
+    }
   }
 
   label {
     align-items: center;
     color: $midnight;
     display: flex;
+    display: -ms-flexbox;
+    -ms-flex: 1;
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
     flex-direction: column;
     justify-content: center;
     line-height: 1;
@@ -50,6 +65,12 @@
     width: 100%;
     white-space: wrap;
     z-index: 1;
+
+    &.nps-selected {
+      background: $action-color;
+      border: 1px solid shade($action-color, 5);
+      color: white;
+    }
   }
 
   input {
@@ -104,6 +125,14 @@
     color: $midnight;
   }
 
+   label.nps-selected {
+    background: $action-color;
+    color: $white;
+    &:hover {
+      color: $white;
+    }
+  }
+
   input {
     &:hover:checked + label {
       color: $midnight;
@@ -121,6 +150,9 @@
 .grouped-options--colorized {
   .input-wrapper {
     background: linear-gradient(to right, rgba($red, 0.6), rgba($warning-color, 0.6), rgba($success-color, 0.6));
+    @media(max-width: $medium-screen) {
+      background: linear-gradient(to bottom, rgba($red, 0.6), rgba($warning-color, 0.6), rgba($success-color, 0.6));
+    }
   }
 
   .option {
@@ -130,6 +162,16 @@
 
   label {
     color: $white;
+
+    &:hover {
+      color: $midnight;
+    }
+  }
+
+  label.nps-selected {
+    color: $midnight;
+    background: none;
+    border: 2px solid darken($action-color, 10);
   }
 
   input {
@@ -145,6 +187,51 @@
     &:checked + label span {
       background: none;
       border: 2px solid darken($action-color, 10);
+    }
+  }
+}
+
+.grouped-options--pagination {
+  .input-wrapper {
+    .option:first-of-type {
+      min-width: 120px;
+    }
+
+    .option:last-of-type {
+      min-width: 95px;
+    }
+  }
+}
+
+.grouped-options-labels {
+  .small-text {
+    font-size: 0.6rem;
+  }
+
+  @media(max-width: $medium-screen) {
+    display: none;
+  }
+
+  & + .grouped-options {
+    .option {
+      span {
+        display: none;
+      }
+
+      @media(max-width: $medium-screen) {
+        label {
+          font-size: 0px;
+
+          input {
+            visibility: visible;
+          }
+
+          span {
+            display: block;
+            font-size: 12px;
+          }
+        }
+      }
     }
   }
 }

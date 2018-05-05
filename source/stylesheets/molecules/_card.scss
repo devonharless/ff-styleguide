@@ -17,13 +17,15 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+      // max-height: 200px;
+      // min-height: 112px;
       position: relative;
       overflow: hidden;
 
       &:before {
         background: linear-gradient(transparent, rgba(#000000, 0.4));
         color: $white;
-        content: "James Smith";
+        // content: "James Smith";
         font-size: 1.75rem;
         font-family: $thin-font-family;
         font-weight: 200;
