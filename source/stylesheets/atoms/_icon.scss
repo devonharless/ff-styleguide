@@ -58,6 +58,11 @@
     background-size: cover;
   }
 
+  &-remind {
+    background: image-url("icon/reminder.svg") no-repeat 0px;
+    background-size: cover;
+  }
+
   &-up-down-arrows {
     background: image-url("icon/icon-up-down-arrows.svg") no-repeat 0px;
     background-size: cover;
@@ -110,6 +115,11 @@
 
     &.icon-star {
       background: image-url("icon/icon-star-white.svg") no-repeat 0px;
+      background-size: cover;
+    }
+
+     &.icon-remind {
+      background: image-url("icon/reminder.svg") no-repeat 0px;
       background-size: cover;
     }
 

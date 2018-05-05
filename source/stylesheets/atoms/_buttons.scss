@@ -168,4 +168,16 @@
       border-color: rgba($white, 0.8);
     }
   }
+
+  &.button--outline-red {
+    background: transparent;
+    border-color: $white;
+    box-shadow: 0 0 1px $red;
+    color: $red;
+
+    &:hover {
+      color: rgba($red, 0.8);
+      border-color: rgba($white, 0.8);
+    }
+  }
 }
