@@ -1,3 +1,8 @@
+.nav-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .nav {
   &--stacked {
     a {
@@ -14,7 +19,7 @@
     }
   }
 
-  &--secondary {
+ &--secondary {
     margin-top: $base-spacing;
 
     #{$all-text-inputs},
@@ -32,6 +37,16 @@
     h6,
     p {
       margin: 0;
+    }
+
+    &-buttons {
+      a, .button, a.button {
+        margin-right: 10px;
+
+        &:last-child {
+          margin-right: 0px;
+        }
+      }
     }
   }
 
@@ -61,7 +76,14 @@
       margin: 0 $small-spacing 0 0;
     }
 
-    .nav-links>a,
+    .nav-links {
+      text-align: right;
+      a {
+        display: inline-flex;
+      }
+    }
+
+    .nav-links a,
     .dropdown-trigger {
       color: desaturate(lighten($dark-gray, 15), 25);
       font-size: $base-font-size;
@@ -71,9 +93,42 @@
       user-select: none;
       vertical-align: middle;
       white-space: nowrap;
+
+      &:hover + .dropdown-menu {
+        display: block;
+        z-index: 3;
+        opacity: 1;
+      }
     }
 
-    & > a.active {
+    .nav-links .dropdown--hover>a {
+      color: $white;
+      padding-bottom: $small-spacing / 2;
+    }
+
+    .dropdown-trigger {
+      height: 40px;
+      margin-left: 0;
+    }
+
+    .dropdown-menu:hover {
+      display: block;
+      z-index: 3;
+      opacity: 1;
+    }
+
+    .nav-links .dropdown-menu a {
+      display: block;
+      position: relative;
+      width: 100%;
+      margin-left: 0;
+      font-weight: 500;
+      line-height: 2.5;
+      padding: 0 1.5rem;
+      text-align: left;
+    }
+
+    a.active {
       color: $action-color;
       font-weight: 600;
     }
@@ -92,6 +147,9 @@
 
     .menu-links {
       display: none;
+      &.active {
+        display: block;
+      }
     }
 
     .menu-links a {

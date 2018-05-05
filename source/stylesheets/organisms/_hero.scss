@@ -23,6 +23,15 @@
     overflow: hidden;
   }
 
+  &--slack {
+    background: #56b6ad;
+    align-items: flex-end;
+    min-height: calc(100vh + 65px);
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+  }
+
   @include media($mobile) {
     min-height: none;
   }
@@ -78,4 +87,9 @@
     width: 46%;
     background: linear-gradient(90deg,transparent,$emerald);
   }
+}
+
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
 }
