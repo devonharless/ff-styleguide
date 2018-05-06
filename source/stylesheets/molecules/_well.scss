@@ -11,6 +11,10 @@
     margin-bottom: 0;
   }
 
+  hr:last-of-type {
+    display: none;
+  }
+
   &--centered {
     align-items: center;
     justify-content: center;
@@ -24,20 +28,24 @@
   &--large {
     padding: $large-spacing;
 
-    // New
     @include media($mobile) {
       padding: $base-spacing;
     }
   }
 
-  &--highlight {
+   &--highlight, &--neutral {
     background: rgba($highlight-color, 0.05);
     border-color: $highlight-color;
   }
 
-  &--success {
+  &--success, &--positive {
     background: rgba($success-color, 0.05);
     border-color: $success-color;
+  }
+
+  &--primary {
+    background: rgba($turquoise, 0.05);
+    border-color: $turquoise;
   }
 
   &--warning {
@@ -45,8 +53,31 @@
     border-color: $warning-color;
   }
 
-  &--error {
+  &--error, &--negative {
     background: rgba($error-color, 0.05);
     border-color: $error-color;
+  }
+
+  &--no-top-margin {
+    margin-top: 0;
+  }
+
+  &--no-bottom-margin {
+    margin-bottom: 0;
+  }
+
+  &--response-rate {
+    margin-bottom: 0;
+    font-size: $base-font-size * .80;
+    padding: $tiny-spacing;
+  }
+
+  &--table-top-margin {
+    margin-top: $small-spacing;
+  }
+
+  .ie-wrap {
+    box-sizing: border-box;
+    max-width: 100%;
   }
 }

@@ -31,6 +31,10 @@
       width: 50%;
     }
 
+    &.align-left {
+      text-align: left;
+    }
+
     &:before {
       content: attr(data-active);
       background-color: $action-color;

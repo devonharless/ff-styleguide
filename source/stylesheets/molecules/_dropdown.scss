@@ -37,6 +37,7 @@
       line-height: 1.2;
       padding: $small-spacing $base-spacing;
       text-align: left;
+      display: block;
 
       &:hover {
         background: rgba($action-color, 0.2);
